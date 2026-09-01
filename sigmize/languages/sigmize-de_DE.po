@@ -1,0 +1,893 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Sigmize 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/sigmize\n"
+"POT-Creation-Date: 2026-06-03T13:20:33+00:00\n"
+"PO-Revision-Date: 2026-06-03T13:20:33+00:00\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: sigmize\n"
+"X-Generator: WP-CLI 2.12.0\n"
+
+#. Plugin Name of the plugin
+#. Author of the plugin
+#: sigmize.php includes/admin/class-admin-menu.php:65
+#: includes/admin/class-admin-menu.php:66
+#: includes/class-abilities-provider.php:70 src/components/AuthPage.jsx:124
+#: src/components/SaaSInfo.jsx:145
+msgid "Sigmize"
+msgstr "Sigmize"
+
+#. Plugin URI of the plugin
+#: sigmize.php
+msgid "https://sigmize.com"
+msgstr "https://sigmize.com"
+
+#. Description of the plugin
+#: sigmize.php
+msgid ""
+"A powerful A/B testing plugin for WordPress that enables testing of pages "
+"and elements with comprehensive analytics."
+msgstr ""
+"Ein leistungsfähiges A/B-Test-Plugin für WordPress, das das Testen von "
+"Seiten und Elementen mit umfassender Analyse ermöglicht."
+
+#. Author URI of the plugin
+#: sigmize.php
+msgid "https://sigmize.com/"
+msgstr "https://sigmize.com/"
+
+#: includes/admin/class-admin-menu.php:77
+#: includes/admin/class-admin-menu.php:78
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: includes/api/class-rest-controller.php:453
+msgid "Invalid nonce."
+msgstr "Ungültiger nonce."
+
+#: includes/api/class-rest-controller.php:485
+#: includes/api/class-rest-controller.php:989
+msgid "Too many requests. Please try again later."
+msgstr "Zu viele Anfragen. Bitte versuchen Sie es später erneut."
+
+#: includes/api/class-rest-controller.php:508
+msgid "Missing X-Sigmize-Signature header."
+msgstr "Fehlender X-Sigmize-Signature-Header."
+
+#: includes/api/class-rest-controller.php:518
+msgid "Invalid webhook signature."
+msgstr "Ungültige Webhook-Signatur."
+
+#: includes/api/class-rest-controller.php:544
+msgid "No authentication credentials configured."
+msgstr "Keine Authentifizierungsanmeldeinformationen konfiguriert."
+
+#: includes/api/class-rest-controller.php:554
+msgid "Missing or invalid Authorization header."
+msgstr "Fehlender oder ungültiger Authorization-Header."
+
+#: includes/api/class-rest-controller.php:564
+msgid "Invalid bearer token."
+msgstr "Ungültiges Bearer-Token."
+
+#: includes/api/class-rest-controller.php:704
+msgid "Successfully disconnected from SaaS platform."
+msgstr "Erfolgreich von der SaaS-Plattform getrennt."
+
+#: includes/api/class-rest-controller.php:747
+msgid "Not connected to SaaS platform."
+msgstr "Nicht mit der SaaS-Plattform verbunden."
+
+#: includes/api/class-rest-controller.php:758
+msgid "Workspace UUID not found."
+msgstr "Workspace-UUID nicht gefunden."
+
+#: includes/api/class-rest-controller.php:778
+msgid "Failed to fetch experiments from SaaS platform."
+msgstr "Fehler beim Abrufen der Experimente von der SaaS-Plattform."
+
+#. translators: %d: HTTP error code returned from SaaS platform
+#: includes/api/class-rest-controller.php:789
+#, php-format
+msgid "SaaS platform returned error code: %d"
+msgstr "Die SaaS-Plattform gab den Fehlercode zurück: %d"
+
+#: includes/api/class-rest-controller.php:802
+msgid "Invalid JSON response from SaaS platform."
+msgstr "Ungültige JSON-Antwort von der SaaS-Plattform."
+
+#. translators: %d: number of experiments synced
+#: includes/api/class-rest-controller.php:940
+#, php-format
+msgid "Successfully synced %d experiment from SaaS platform."
+msgid_plural "Successfully synced %d experiments from SaaS platform."
+msgstr[0] "%d Experiment erfolgreich von der SaaS-Plattform synchronisiert."
+msgstr[1] "%d Experimente erfolgreich von der SaaS-Plattform synchronisiert."
+
+#. translators: %s: exception error message
+#: includes/api/class-rest-controller.php:958
+#, php-format
+msgid "An error occurred during sync: %s"
+msgstr "Ein Fehler ist während der Synchronisation aufgetreten: %s"
+
+#: includes/api/class-rest-controller.php:1001
+msgid "Failed to set consent cookie."
+msgstr "Fehler beim Setzen des Zustimmungscookies."
+
+#: includes/api/class-rest-controller.php:1045
+#: includes/class-abilities-provider.php:627
+msgid "SDK loading setting updated successfully."
+msgstr "SDK-Ladeeinstellungen erfolgreich aktualisiert."
+
+#: includes/class-abilities-provider.php:71
+msgid "Manage A/B testing experiments and configuration."
+msgstr "A/B-Testexperimente und -konfiguration verwalten."
+
+#: includes/class-abilities-provider.php:120
+msgid ""
+"Sigmize is not connected to a workspace. Please connect via the Sigmize "
+"dashboard (WP Admin → Sigmize) before using this ability."
+msgstr ""
+"Sigmize ist nicht mit einem Workspace verbunden. Bitte verbinden Sie sich "
+"über das Sigmize-Dashboard (WP Admin → Sigmize), bevor Sie diese Funktion "
+"nutzen."
+
+#: includes/class-abilities-provider.php:144
+msgid "Sigmize: Connection Status"
+msgstr "Sigmize: Verbindungsstatus"
+
+#: includes/class-abilities-provider.php:145
+msgid ""
+"Returns the current Sigmize connection status, workspace UUID, connection "
+"ID, and last sync time."
+msgstr ""
+"Gibt den aktuellen Sigmize-Verbindungsstatus, die Workspace-UUID, die "
+"Verbindungs-ID und die letzte Synchronisationszeit zurück."
+
+#: includes/class-abilities-provider.php:176
+msgid "Sigmize: List Experiments"
+msgstr "Sigmize: Experimente auflisten"
+
+#: includes/class-abilities-provider.php:177
+msgid ""
+"Returns the locally-cached list of A/B testing experiments, optionally "
+"filtered by status."
+msgstr ""
+"Gibt die lokal zwischengespeicherte Liste der A/B-Testexperimente zurück, "
+"optional gefiltert nach Status."
+
+#: includes/class-abilities-provider.php:185
+msgid "Filter experiments by status (e.g. \"running\")."
+msgstr "Filtere Experimente nach Status (z. B. \"laufend\")."
+
+#: includes/class-abilities-provider.php:213
+msgid "Sigmize: Get Experiment"
+msgstr "Sigmize: Experiment abrufen"
+
+#: includes/class-abilities-provider.php:214
+msgid "Returns a single experiment from the local cache by its UUID."
+msgstr ""
+"Gibt ein einzelnes Experiment aus dem lokalen Cache anhand seiner UUID "
+"zurück."
+
+#: includes/class-abilities-provider.php:223
+msgid "The UUID of the experiment to retrieve."
+msgstr "Die UUID des abzurufenden Experiments."
+
+#: includes/class-abilities-provider.php:251
+msgid "Sigmize: Request Sync"
+msgstr "Sigmize: Anfrage Sync"
+
+#: includes/class-abilities-provider.php:252
+msgid ""
+"Triggers an immediate sync that fetches all experiments from the remote "
+"Sigmize SaaS platform and overwrites the local experiment cache. Makes an "
+"outbound HTTP request to the Sigmize API. Safe to run multiple times — each "
+"run fetches the latest data. Avoid calling this repeatedly in quick "
+"succession."
+msgstr ""
+"Löst eine sofortige Synchronisierung aus, die alle Experimente von der "
+"entfernten Sigmize SaaS-Plattform abruft und den lokalen Experimentcache "
+"überschreibt. Sendet eine ausgehende HTTP-Anfrage an die Sigmize API. Kann "
+"mehrfach sicher ausgeführt werden — jeder Durchlauf holt die neuesten Daten."
+" Vermeiden Sie es, dies wiederholt in schnellem Erfolg aufzurufen."
+
+#: includes/class-abilities-provider.php:283
+msgid "Sigmize: Cache Stats"
+msgstr "Sigmize: Cache-Statistiken"
+
+#: includes/class-abilities-provider.php:284
+msgid ""
+"Returns statistics about the local experiments cache, including count and "
+"last sync time."
+msgstr ""
+"Gibt Statistiken über den lokalen Experimentcache zurück, einschließlich "
+"Anzahl und letzter Synchronisierungszeit."
+
+#: includes/class-abilities-provider.php:315
+msgid "Sigmize: Get Settings"
+msgstr "Sigmize: Einstellungen abrufen"
+
+#: includes/class-abilities-provider.php:316
+msgid ""
+"Returns the current Sigmize plugin settings including SDK loading mode and "
+"GDPR configuration. Call this before using update-sdk-mode to check the "
+"current state."
+msgstr ""
+"Gibt die aktuellen Sigmize-Plugin-Einstellungen zurück, einschließlich SDK-"
+"Lademodus und GDPR-Konfiguration. Rufen Sie dies ab, bevor Sie update-sdk-"
+"mode verwenden, um den aktuellen Zustand zu überprüfen."
+
+#: includes/class-abilities-provider.php:347
+msgid "Sigmize: Update SDK Mode"
+msgstr "Sigmize: SDK-Modus aktualisieren"
+
+#: includes/class-abilities-provider.php:348
+msgid ""
+"Enables or disables manual SDK loading mode for the Sigmize snippet. When "
+"enabled, the Sigmize JavaScript SDK is not automatically injected into pages"
+" — the site owner must load it manually. This directly affects whether A/B "
+"tests run on the frontend. Confirm with the user before changing, especially"
+" when disabling automatic loading, as it will stop all running experiments "
+"from functioning."
+msgstr ""
+"Aktiviert oder deaktiviert den manuellen SDK-Lademodus für den Sigmize-"
+"Snippet. Wenn aktiviert, wird das Sigmize JavaScript SDK nicht automatisch "
+"in die Seiten eingefügt — der Seitenbesitzer muss es manuell laden. Dies hat"
+" direkten Einfluss darauf, ob A/B-Tests im Frontend ausgeführt werden. "
+"Bestätigen Sie dies mit dem Benutzer, bevor Sie Änderungen vornehmen, "
+"insbesondere beim Deaktivieren des automatischen Ladens, da dies alle "
+"laufenden Experimente an der Ausführung hindert."
+
+#: includes/class-abilities-provider.php:357
+msgid "Whether to enable manual SDK loading."
+msgstr "Ob der manuelle SDK-Lademodus aktiviert werden soll."
+
+#: includes/class-abilities-provider.php:385
+msgid "Sigmize: Disconnect"
+msgstr "Sigmize: Trennen"
+
+#: includes/class-abilities-provider.php:386
+msgid ""
+"Permanently disconnects the site from the Sigmize SaaS platform, deleting "
+"all authentication tokens, cached experiment data, and plugin settings. This"
+" cannot be undone — the user will need to reconnect and reconfigure from "
+"scratch. Always ask the user to explicitly confirm before running this."
+msgstr ""
+"Trennt die Seite dauerhaft von der Sigmize SaaS-Plattform, löscht alle "
+"Authentifizierungstokens, zwischengespeicherten Experimentdaten und Plugin-"
+"Einstellungen. Dies kann nicht rückgängig gemacht werden — der Benutzer muss"
+" sich erneut verbinden und von Grund auf neu konfigurieren. Bitten Sie den "
+"Benutzer immer, dies ausdrücklich zu bestätigen, bevor Sie dies ausführen."
+
+#: includes/class-abilities-provider.php:504
+msgid "The `uuid` input parameter is required."
+msgstr "Der `uuid` Eingabeparameter ist erforderlich."
+
+#: includes/class-abilities-provider.php:616
+msgid "The `manual_sdk_loading` input parameter is required."
+msgstr "Der `manual_sdk_loading` Eingabeparameter ist erforderlich."
+
+#: includes/class-auth-manager.php:549
+msgid "Invalid authentication request. Please try connecting again."
+msgstr "Ungültige Authentifizierungsanfrage. Bitte versuchen Sie es erneut."
+
+#: includes/class-auth-manager.php:550
+msgid "Authentication failed. Please try again."
+msgstr "Authentifizierung fehlgeschlagen. Bitte versuchen Sie es erneut."
+
+#. translators: %d: HTTP status code returned by the API.
+#: includes/class-saas-client.php:105 includes/class-saas-client.php:168
+#: includes/class-saas-client.php:232 includes/class-saas-client.php:294
+#: includes/class-saas-client.php:417
+#, php-format
+msgid "API returned status code %d"
+msgstr "API hat den Statuscode %d zurückgegeben."
+
+#: includes/class-saas-client.php:115 includes/class-saas-client.php:178
+#: includes/class-saas-client.php:242 includes/class-saas-client.php:427
+msgid "Invalid JSON response from API"
+msgstr "Ungültige JSON-Antwort von der API"
+
+#. translators: %s: error message detail.
+#: includes/class-saas-client.php:124 includes/class-saas-client.php:187
+#: includes/class-saas-client.php:251 includes/class-saas-client.php:307
+#: includes/class-saas-client.php:436
+#, php-format
+msgid "Exception during API request: %s"
+msgstr "Ausnahme während der API-Anfrage: %s"
+
+#: includes/frontend/integrations/class-abstract-integration.php:175
+#: src/components/AuthPage.jsx:190
+msgid "Easy Digital Downloads"
+msgstr "Easy Digital Downloads"
+
+#: includes/frontend/integrations/class-abstract-integration.php:177
+msgid "SureCart"
+msgstr "SureCart"
+
+#: includes/frontend/integrations/class-abstract-integration.php:179
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: includes/frontend/integrations/class-abstract-integration.php:181
+msgid "Custom Events"
+msgstr "Benutzerdefinierte Ereignisse"
+
+#: sigmize.php:288
+msgid "Access Dashboard"
+msgstr "Zugriff auf Dashboard"
+
+#: sigmize.php:289
+msgid "Get Started Now"
+msgstr "Jetzt loslegen"
+
+#: src/App.jsx:31
+msgid "Authentication"
+msgstr "Authentifizierung"
+
+#: src/App.jsx:46
+msgid "A/B Testing (SaaS)"
+msgstr "A/B-Tests (SaaS)"
+
+#: src/components/AuthPage.jsx:108
+msgid "Authentication failed"
+msgstr "Authentifizierung fehlgeschlagen"
+
+#: src/components/AuthPage.jsx:110
+msgid "Please try again. If the problem persists, contact support."
+msgstr ""
+"Bitte versuchen Sie es erneut. Wenn das Problem weiterhin besteht, wenden "
+"Sie sich an den Support."
+
+#: src/components/AuthPage.jsx:131
+msgid "Welcome to Sigmize"
+msgstr "Willkommen bei Sigmize"
+
+#: src/components/AuthPage.jsx:135
+msgid ""
+"Sigmize is a comprehensive A/B testing and analytics platform that helps you"
+" optimize your website performance through data-driven experiments. Create "
+"variations, analyze user behavior with heatmaps and session replays, and "
+"make informed decisions based on real insights."
+msgstr ""
+"Sigmize ist eine umfassende A/B-Test- und Analyseplattform, die Ihnen hilft,"
+" die Leistung Ihrer Website durch datengesteuerte Experimente zu optimieren."
+" Erstellen Sie Variationen, analysieren Sie das Nutzerverhalten mit Heatmaps"
+" und Sitzungswiederholungen und treffen Sie informierte Entscheidungen "
+"basierend auf echten Erkenntnissen."
+
+#: src/components/AuthPage.jsx:140 src/components/AuthPage.jsx:236
+msgid "Get Started"
+msgstr "Loslegen"
+
+#: src/components/AuthPage.jsx:153
+msgid "Analytics Dashboard Preview"
+msgstr "Vorschau des Analyse-Dashboards"
+
+#: src/components/AuthPage.jsx:165
+msgid "Experiment Management"
+msgstr "Experimentverwaltung"
+
+#: src/components/AuthPage.jsx:166
+msgid ""
+"Create and manage A/B tests with intuitive controls and comprehensive "
+"experiment tracking."
+msgstr ""
+"Erstellen und verwalten Sie A/B-Tests mit intuitiven Steuerungen und "
+"umfassendem Experiment-Tracking."
+
+#: src/components/AuthPage.jsx:170
+msgid "Variation Testing"
+msgstr "Variations-Test"
+
+#: src/components/AuthPage.jsx:171
+msgid ""
+"Test different page variations and element changes to find the most "
+"effective designs."
+msgstr ""
+"Testen Sie verschiedene Seitenvariationen und Änderungen von Elementen, um "
+"die effektivsten Designs zu finden."
+
+#: src/components/AuthPage.jsx:175
+msgid "Traffic Assignment"
+msgstr "Traffic-Zuweisung"
+
+#: src/components/AuthPage.jsx:176
+msgid ""
+"Intelligent visitor assignment ensures balanced traffic distribution across "
+"test variants."
+msgstr ""
+"Intelligente Besucherzuweisung sorgt für eine ausgewogene Verkehrsverteilung"
+" über Testvarianten."
+
+#: src/components/AuthPage.jsx:180
+msgid "Heatmap Analytics"
+msgstr "Heatmap-Analyse"
+
+#: src/components/AuthPage.jsx:181
+msgid ""
+"Visualize user interactions with click heatmaps to understand where visitors"
+" engage most on your pages."
+msgstr ""
+"Visualisieren Sie Nutzerinteraktionen mit Klick-Heatmaps, um zu verstehen, "
+"wo Besucher am meisten auf Ihren Seiten interagieren."
+
+#: src/components/AuthPage.jsx:185
+msgid "Session Replays"
+msgstr "Sitzungswiederholungen"
+
+#: src/components/AuthPage.jsx:186
+msgid ""
+"Watch real user sessions to understand visitor behavior and identify "
+"conversion roadblocks."
+msgstr ""
+"Sehen Sie sich echte Nutzersitzungen an, um das Besucher-verhalten zu "
+"verstehen und Conversion-Hürden zu identifizieren."
+
+#: src/components/AuthPage.jsx:191
+msgid ""
+"Track purchase completions and revenue per variation. Measure which variant "
+"drives more digital product sales."
+msgstr ""
+"Verfolgen Sie Kaufabschlüsse und Einnahmen pro Variation. Messen Sie, welche"
+" Variante mehr digitale Produktverkäufe antreibt."
+
+#: src/components/AuthPage.jsx:195
+msgid "SureCart Integration"
+msgstr "SureCart-Integration"
+
+#: src/components/AuthPage.jsx:196
+msgid ""
+"Monitor add-to-cart and order completion events per variant. Optimize "
+"checkout flows for maximum revenue."
+msgstr ""
+"Überwachen Sie die Ereignisse zum Hinzufügen zum Warenkorb und den Abschluss"
+" von Bestellungen pro Variante. Optimieren Sie Checkout-Prozesse für "
+"maximalen Umsatz."
+
+#: src/components/AuthPage.jsx:200
+msgid "WooCommerce Integration"
+msgstr "WooCommerce-Integration"
+
+#: src/components/AuthPage.jsx:201
+msgid ""
+"Track cart additions and completed purchases by variation. Compare "
+"conversion rates and average order values."
+msgstr ""
+"Verfolgen Sie Warenkorbineinfügungen und abgeschlossene Käufe nach "
+"Variation. Vergleichen Sie Conversion-Raten und durchschnittliche "
+"Bestellwerte."
+
+#: src/components/AuthPage.jsx:210
+msgid "Trusted by 100K Businesses"
+msgstr "Vertraut von 100K Unternehmen"
+
+#: src/components/AuthPage.jsx:247
+msgid "Back to Dashboard"
+msgstr "Zurück zum Dashboard"
+
+#: src/components/ErrorBoundary.jsx:60
+msgid "Something went wrong"
+msgstr "Etwas ist schiefgelaufen"
+
+#: src/components/ErrorBoundary.jsx:62
+msgid ""
+"We're sorry, but something unexpected happened. Please try refreshing the "
+"page."
+msgstr ""
+"Es tut uns leid, aber etwas Unerwartetes ist passiert. Bitte versuchen Sie, "
+"die Seite neu zu laden."
+
+#: src/components/ErrorBoundary.jsx:70 src/components/ErrorBoundary.jsx:159
+msgid "Try Again"
+msgstr "Erneut versuchen"
+
+#: src/components/ErrorBoundary.jsx:76
+msgid "Reload Page"
+msgstr "Seite neu laden"
+
+#: src/components/ErrorBoundary.jsx:84
+msgid "🔍 Error Details (Development Mode)"
+msgstr "🔍 Fehlerdetails (Entwicklungsmodus)"
+
+#: src/components/ErrorBoundary.jsx:88
+msgid "Error:"
+msgstr "Fehler:"
+
+#: src/components/ErrorBoundary.jsx:95
+msgid "Component Stack:"
+msgstr "Komponenten-Stack:"
+
+#. translators: %s: page name.
+#: src/components/ErrorBoundary.jsx:132
+#, js-format
+msgid ""
+"There was an error loading the %s page. Please try refreshing the page."
+msgstr ""
+"Beim Laden der %s-Seite ist ein Fehler aufgetreten. Bitte versuchen Sie, die"
+" Seite neu zu laden."
+
+#: src/components/ErrorBoundary.jsx:140
+msgid "Oops! Something went wrong"
+msgstr "Hoppla! Etwas ist schiefgelaufen"
+
+#. translators: %s: page name.
+#: src/components/ErrorBoundary.jsx:145
+#, js-format
+msgid ""
+"We encountered an error while loading the %s page. This might be a temporary"
+" issue."
+msgstr ""
+"Beim Laden der %s-Seite ist ein Fehler aufgetreten. Dies könnte ein "
+"vorübergehendes Problem sein."
+
+#: src/components/ErrorBoundary.jsx:153 src/components/ErrorBoundary.jsx:255
+msgid "Refresh Page"
+msgstr "Seite aktualisieren"
+
+#. translators: %s: component name.
+#: src/components/ErrorBoundary.jsx:183
+#, js-format
+msgid "Error loading %s"
+msgstr "Fehler beim Laden von %s"
+
+#. translators: %s: name of the item that failed to load.
+#: src/components/ErrorBoundary.jsx:194 src/components/ErrorBoundary.jsx:232
+#, js-format
+msgid "Unable to load %s"
+msgstr "Kann %s nicht laden"
+
+#. translators: %s: component name.
+#: src/components/ErrorBoundary.jsx:209
+#, js-format
+msgid "There was an error loading the %s. Please try again."
+msgstr ""
+"Beim Laden von %s ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+
+#. translators: %s: type of data being loaded.
+#: src/components/ErrorBoundary.jsx:223
+#, js-format
+msgid "Failed to load %s. Please check your connection and try again."
+msgstr ""
+"Fehler beim Laden von %s. Bitte überprüfen Sie Ihre Verbindung und versuchen"
+" Sie es erneut."
+
+#. translators: %s: type of data being loaded.
+#: src/components/ErrorBoundary.jsx:238
+#, js-format
+msgid ""
+"We're having trouble loading the %s. This could be due to a network issue or"
+" server problem."
+msgstr ""
+"Wir haben Probleme beim Laden von %s. Dies könnte auf ein Netzwerkproblem "
+"oder ein Serverproblem zurückzuführen sein."
+
+#: src/components/ErrorBoundary.jsx:249
+msgid "Retry"
+msgstr "Erneut versuchen"
+
+#: src/components/SaaSInfo.jsx:27
+msgid "Never"
+msgstr "Nie"
+
+#: src/components/SaaSInfo.jsx:41
+msgid "Failed to fetch sync data"
+msgstr "Fehler beim Abrufen von Synchronisierungsdaten"
+
+#: src/components/SaaSInfo.jsx:68
+msgid "Failed to update setting"
+msgstr "Fehler beim Aktualisieren der Einstellung"
+
+#: src/components/SaaSInfo.jsx:72
+msgid "Setting Updated"
+msgstr "Einstellung aktualisiert"
+
+#: src/components/SaaSInfo.jsx:72
+msgid "SDK loading setting updated"
+msgstr "SDK-Ladeeinstellung aktualisiert"
+
+#: src/components/SaaSInfo.jsx:74
+msgid "Update Failed"
+msgstr "Aktualisierung fehlgeschlagen"
+
+#: src/components/SaaSInfo.jsx:74
+msgid "Unable to update setting"
+msgstr "Einstellung kann nicht aktualisiert werden"
+
+#: src/components/SaaSInfo.jsx:91
+msgid "Syncing"
+msgstr "Synchronisieren"
+
+#: src/components/SaaSInfo.jsx:91
+msgid "Requesting sync from Sigmize..."
+msgstr "Synchronisierung von Sigmize anfordern..."
+
+#: src/components/SaaSInfo.jsx:98
+msgid "Sync failed"
+msgstr "Synchronisierung fehlgeschlagen"
+
+#: src/components/SaaSInfo.jsx:101
+msgid "Synced"
+msgstr "Synchronisiert"
+
+#: src/components/SaaSInfo.jsx:101
+msgid "Experiments synced"
+msgstr "Experimente synchronisiert"
+
+#: src/components/SaaSInfo.jsx:104
+msgid "Unable to sync"
+msgstr "Synchronisierung nicht möglich"
+
+#: src/components/SaaSInfo.jsx:105
+msgid "Sync Failed"
+msgstr "Synchronisierung fehlgeschlagen"
+
+#: src/components/SaaSInfo.jsx:123
+msgid "Disconnect failed"
+msgstr "Trennen fehlgeschlagen"
+
+#: src/components/SaaSInfo.jsx:126
+msgid "Disconnected"
+msgstr "Getrennt"
+
+#: src/components/SaaSInfo.jsx:126
+msgid "You have been disconnected."
+msgstr "Sie wurden getrennt."
+
+#: src/components/SaaSInfo.jsx:129
+msgid "Disconnect Failed"
+msgstr "Trennen fehlgeschlagen"
+
+#: src/components/SaaSInfo.jsx:129
+msgid "Unable to disconnect"
+msgstr "Trennen nicht möglich"
+
+#: src/components/SaaSInfo.jsx:151
+msgid ""
+"Your WordPress site is connected to Sigmize. Create and manage A/B test "
+"experiments from your Sigmize dashboard, then sync to pull the latest "
+"experiment updates, settings, and configurations to WordPress for fast "
+"delivery to your visitors."
+msgstr ""
+"Ihre WordPress-Website ist mit Sigmize verbunden. Erstellen und verwalten "
+"Sie A/B-Testexperimente von Ihrem Sigmize-Dashboard und synchronisieren Sie,"
+" um die neuesten Experimentsupdates, Einstellungen und Konfigurationen "
+"schnell an Ihre Besucher in WordPress zu liefern."
+
+#: src/components/SaaSInfo.jsx:160
+msgid "Sync error"
+msgstr "Synchronisierungsfehler"
+
+#: src/components/SaaSInfo.jsx:170
+msgid "Connection Status"
+msgstr "Verbindungsstatus"
+
+#: src/components/SaaSInfo.jsx:172
+msgid "Active & Healthy"
+msgstr "Aktiv & Gesund"
+
+#: src/components/SaaSInfo.jsx:178
+msgid "Last Sync"
+msgstr "Letzte Synchronisierung"
+
+#: src/components/SaaSInfo.jsx:180
+msgid "Never synced"
+msgstr "Nie synchronisiert"
+
+#: src/components/SaaSInfo.jsx:186
+msgid "Active Experiments"
+msgstr "Aktive Experimente"
+
+#: src/components/SaaSInfo.jsx:200
+msgid "Auto Load SDK"
+msgstr "SDK automatisch laden"
+
+#: src/components/SaaSInfo.jsx:204
+msgid ""
+"Automatically inject the Sigmize JavaScript SDK on your website. Disable "
+"this only if you want to manually add the SDK script to your theme or custom"
+" code."
+msgstr ""
+"Automatisch das Sigmize JavaScript SDK auf Ihrer Website einfügen. "
+"Deaktivieren Sie dies nur, wenn Sie das SDK-Skript manuell zu Ihrem Theme "
+"oder benutzerdefiniertem Code hinzufügen möchten."
+
+#: src/components/SaaSInfo.jsx:209
+msgid "Warning:"
+msgstr "Warnung:"
+
+#: src/components/SaaSInfo.jsx:209
+msgid ""
+"Auto loading is disabled. You'll need to manually add the SDK script to your"
+" website for A/B testing and analytics to work."
+msgstr ""
+"Das automatische Laden ist deaktiviert. Sie müssen das SDK-Skript manuell zu"
+" Ihrer Website hinzufügen, damit A/B-Tests und Analysen funktionieren."
+
+#: src/components/SaaSInfo.jsx:235
+msgid "Open Dashboard"
+msgstr "Dashboard öffnen"
+
+#: src/components/SaaSInfo.jsx:252
+msgid "Syncing…"
+msgstr "Synchronisiere…"
+
+#: src/components/SaaSInfo.jsx:259
+msgid "Sync Now"
+msgstr "Jetzt synchronisieren"
+
+#: src/components/SaaSInfo.jsx:270
+msgid "Disconnect from Sigmize?"
+msgstr "Von Sigmize trennen?"
+
+#: src/components/SaaSInfo.jsx:273
+msgid ""
+"This will remove authentication and cached Sigmize experiments from "
+"WordPress. You can reconnect anytime."
+msgstr ""
+"Dies entfernt die Authentifizierung und zwischengespeicherte Sigmize-"
+"Experimente aus WordPress. Sie können sich jederzeit wieder verbinden."
+
+#: src/components/SaaSInfo.jsx:277
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: src/components/SaaSInfo.jsx:284
+msgid "Disconnecting…"
+msgstr "Trenne…"
+
+#: src/components/SaaSInfo.jsx:284 src/components/SaaSInfo.jsx:298
+msgid "Disconnect"
+msgstr "Trennen"
+
+#: src/components/ToastNotification.jsx:108
+msgid "Close"
+msgstr "Schließen"
+
+#: src/api.js:16
+msgid "Something went wrong. Please try again."
+msgstr "Etwas ist schiefgegangen. Bitte versuche es erneut."
+
+#: includes/admin/class-dashboard-widget.php:57
+msgid "Sigmize - Experiment Summary"
+msgstr "Sigmize - Experiment-Übersicht"
+
+#. translators: %s: number of visitors.
+#: includes/admin/class-dashboard-widget.php:167
+#, php-format
+msgid "%s visitor"
+msgstr "%s Besucher"
+
+#. translators: %s: number of visitors.
+#: includes/admin/class-dashboard-widget.php:169
+#, php-format
+msgid "%s visitors"
+msgstr "%s Besucher"
+
+#. translators: %s: number of experiments currently running.
+#: includes/admin/class-dashboard-widget.php:171
+#, php-format
+msgid "%s active"
+msgstr "%s aktiv"
+
+#: includes/admin/class-dashboard-widget.php:172
+msgid "No experiments are running yet."
+msgstr "Es laufen noch keine Experimente."
+
+#: includes/admin/class-dashboard-widget.php:204
+msgid "Start testing what actually converts"
+msgstr "Testen Sie, was wirklich konvertiert"
+
+#: includes/admin/class-dashboard-widget.php:206
+msgid ""
+"Connect your Sigmize account to run A/B tests, heatmaps and session "
+"recordings on this site, and see the results right here."
+msgstr ""
+"Verbinden Sie Ihr Sigmize-Konto, um A/B-Tests, Heatmaps und "
+"Sitzungsaufzeichnungen auf dieser Website durchzuführen und die Ergebnisse "
+"direkt hier zu sehen."
+
+#: includes/admin/class-dashboard-widget.php:210
+msgid "Connect Sigmize"
+msgstr "Sigmize verbinden"
+
+#: includes/admin/class-dashboard-widget.php:230
+msgid "Experiments"
+msgstr "Experimente"
+
+#: includes/admin/class-dashboard-widget.php:236
+msgid "Total Impressions"
+msgstr "Impressionen gesamt"
+
+#: includes/admin/class-dashboard-widget.php:237
+msgid "Conversion Rate"
+msgstr "Konversionsrate"
+
+#: includes/admin/class-dashboard-widget.php:238
+msgid "Heatmaps"
+msgstr "Heatmaps"
+
+#: includes/admin/class-dashboard-widget.php:239
+msgid "Session Recordings"
+msgstr "Sitzungsaufzeichnungen"
+
+#: includes/admin/class-dashboard-widget.php:244
+msgid "Running Experiments"
+msgstr "Laufende Experimente"
+
+#: includes/admin/class-dashboard-widget.php:249
+msgid "Could not load your Sigmize overview."
+msgstr "Ihre Sigmize-Übersicht konnte nicht geladen werden."
+
+#: includes/admin/class-dashboard-widget.php:250
+msgid "Check your connection"
+msgstr "Verbindung prüfen"
+
+#: includes/admin/class-dashboard-widget.php:255
+msgid "Open Sigmize"
+msgstr "Sigmize öffnen"
+
+#: includes/admin/class-dashboard-widget.php:258
+msgid "View Experiments"
+msgstr "Experimente ansehen"
+
+#: includes/admin/class-dashboard-widget.php:306
+msgid "(opens in a new tab)"
+msgstr "(wird in einem neuen Tab geöffnet)"
+
+#: includes/api/class-rest-controller.php:300
+msgid "This site is not connected to Sigmize."
+msgstr "Diese Website ist nicht mit Sigmize verbunden."
+
+#: includes/api/class-rest-controller.php:326
+msgid "Could not load your Sigmize overview. Please try again shortly."
+msgstr ""
+"Ihre Sigmize-Übersicht konnte nicht geladen werden. Bitte versuchen Sie es "
+"in Kürze erneut."
+
+#: includes/api/class-rest-controller.php:618
+msgid "This site is already connected to Sigmize."
+msgstr "Diese Website ist bereits mit Sigmize verbunden."
+
+#: includes/api/class-rest-controller.php:639
+msgid ""
+"You already have a Sigmize account. Connect this site to it to finish setup."
+msgstr ""
+"Sie haben bereits ein Sigmize-Konto. Verbinden Sie diese Website damit, um "
+"die Einrichtung abzuschließen."
+
+#: includes/api/class-rest-controller.php:653
+msgid "Your site is now connected and tracking."
+msgstr "Ihre Website ist jetzt verbunden und wird erfasst."
+
+#: includes/class-auth-manager.php:177
+msgid "This site has no valid administrator email address."
+msgstr "Diese Website hat keine gültige Administrator-E-Mail-Adresse."
+
+#: includes/class-auth-manager.php:194
+msgid "Could not reach Sigmize. Please try again."
+msgstr "Sigmize konnte nicht erreicht werden. Bitte versuchen Sie es erneut."
+
+#: includes/class-auth-manager.php:212
+msgid "Sigmize could not set up your account."
+msgstr "Sigmize konnte Ihr Konto nicht einrichten."
+
+#: includes/class-auth-manager.php:220
+msgid "Sigmize returned an unexpected response."
+msgstr "Sigmize hat eine unerwartete Antwort zurückgegeben."
+
+#: includes/class-auth-manager.php:252
+msgid "Sigmize did not return usable credentials."
+msgstr "Sigmize hat keine verwendbaren Zugangsdaten zurückgegeben."
+
+#: includes/class-auth-manager.php:262
+msgid "Could not save the Sigmize connection."
+msgstr "Die Sigmize-Verbindung konnte nicht gespeichert werden."

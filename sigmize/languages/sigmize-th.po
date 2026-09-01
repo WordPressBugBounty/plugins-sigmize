@@ -1,0 +1,860 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Sigmize 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/sigmize\n"
+"POT-Creation-Date: 2026-06-03T13:20:33+00:00\n"
+"PO-Revision-Date: 2026-06-03T13:20:33+00:00\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: sigmize\n"
+"X-Generator: WP-CLI 2.12.0\n"
+
+#. Plugin Name of the plugin
+#. Author of the plugin
+#: sigmize.php includes/admin/class-admin-menu.php:65
+#: includes/admin/class-admin-menu.php:66
+#: includes/class-abilities-provider.php:70 src/components/AuthPage.jsx:124
+#: src/components/SaaSInfo.jsx:145
+msgid "Sigmize"
+msgstr "Sigmize"
+
+#. Plugin URI of the plugin
+#: sigmize.php
+msgid "https://sigmize.com"
+msgstr "https://sigmize.com"
+
+#. Description of the plugin
+#: sigmize.php
+msgid ""
+"A powerful A/B testing plugin for WordPress that enables testing of pages "
+"and elements with comprehensive analytics."
+msgstr ""
+"ปลั๊กอิน A/B ทดสอบที่ทรงพลังสำหรับ WordPress "
+"ที่ช่วยให้ทดสอบหน้าและองค์ประกอบพร้อมการวิเคราะห์ที่ครอบคลุม."
+
+#. Author URI of the plugin
+#: sigmize.php
+msgid "https://sigmize.com/"
+msgstr "https://sigmize.com/"
+
+#: includes/admin/class-admin-menu.php:77
+#: includes/admin/class-admin-menu.php:78
+msgid "Dashboard"
+msgstr "แดชบอร์ด"
+
+#: includes/api/class-rest-controller.php:453
+msgid "Invalid nonce."
+msgstr "Nonce ไม่ถูกต้อง."
+
+#: includes/api/class-rest-controller.php:485
+#: includes/api/class-rest-controller.php:989
+msgid "Too many requests. Please try again later."
+msgstr "คำขอมากเกินไป กรุณาลองอีกครั้งภายหลัง."
+
+#: includes/api/class-rest-controller.php:508
+msgid "Missing X-Sigmize-Signature header."
+msgstr "หายไปหรือไม่ถูกต้อง X-Sigmize-Signature header."
+
+#: includes/api/class-rest-controller.php:518
+msgid "Invalid webhook signature."
+msgstr "ลายเซ็น webhook ไม่ถูกต้อง."
+
+#: includes/api/class-rest-controller.php:544
+msgid "No authentication credentials configured."
+msgstr "ไม่มีข้อมูลรับรองการตรวจสอบสิทธิ์ที่กำหนด."
+
+#: includes/api/class-rest-controller.php:554
+msgid "Missing or invalid Authorization header."
+msgstr "หายไปหรือไม่ถูกต้อง Authorization header."
+
+#: includes/api/class-rest-controller.php:564
+msgid "Invalid bearer token."
+msgstr "Bearer token ไม่ถูกต้อง."
+
+#: includes/api/class-rest-controller.php:704
+msgid "Successfully disconnected from SaaS platform."
+msgstr "ยกเลิกการเชื่อมต่อจากแพลตฟอร์ม SaaS สำเร็จแล้ว."
+
+#: includes/api/class-rest-controller.php:747
+msgid "Not connected to SaaS platform."
+msgstr "ไม่ได้เชื่อมต่อกับแพลตฟอร์ม SaaS."
+
+#: includes/api/class-rest-controller.php:758
+msgid "Workspace UUID not found."
+msgstr "ไม่พบ UUID ของเวิร์กสเปซ."
+
+#: includes/api/class-rest-controller.php:778
+msgid "Failed to fetch experiments from SaaS platform."
+msgstr "ไม่สามารถดึงการทดลองจากแพลตฟอร์ม SaaS ได้."
+
+#. translators: %d: HTTP error code returned from SaaS platform
+#: includes/api/class-rest-controller.php:789
+#, php-format
+msgid "SaaS platform returned error code: %d"
+msgstr "แพลตฟอร์ม SaaS คืนรหัสข้อผิดพลาด: %d"
+
+#: includes/api/class-rest-controller.php:802
+msgid "Invalid JSON response from SaaS platform."
+msgstr "ตอบกลับ JSON ไม่ถูกต้องจากแพลตฟอร์ม SaaS."
+
+#. translators: %d: number of experiments synced
+#: includes/api/class-rest-controller.php:940
+#, php-format
+msgid "Successfully synced %d experiment from SaaS platform."
+msgid_plural "Successfully synced %d experiments from SaaS platform."
+msgstr[0] "ซิงค์ %d การทดลองจากแพลตฟอร์ม SaaS สำเร็จแล้ว"
+msgstr[1] "ซิงค์ %d การทดลองจากแพลตฟอร์ม SaaS สำเร็จแล้ว"
+
+#. translators: %s: exception error message
+#: includes/api/class-rest-controller.php:958
+#, php-format
+msgid "An error occurred during sync: %s"
+msgstr "เกิดข้อผิดพลาดระหว่างการซิงค์: %s"
+
+#: includes/api/class-rest-controller.php:1001
+msgid "Failed to set consent cookie."
+msgstr "ไม่สามารถตั้งค่า cookie ยินยอมได้."
+
+#: includes/api/class-rest-controller.php:1045
+#: includes/class-abilities-provider.php:627
+msgid "SDK loading setting updated successfully."
+msgstr "การตั้งค่าการโหลด SDK ได้รับการอัปเดตสำเร็จ."
+
+#: includes/class-abilities-provider.php:71
+msgid "Manage A/B testing experiments and configuration."
+msgstr "จัดการการทดลองและการกำหนดค่า A/B testing."
+
+#: includes/class-abilities-provider.php:120
+msgid ""
+"Sigmize is not connected to a workspace. Please connect via the Sigmize "
+"dashboard (WP Admin → Sigmize) before using this ability."
+msgstr ""
+"Sigmize ไม่ได้เชื่อมต่อกับเวิร์กสเปซ กรุณาเชื่อมต่อผ่านแดชบอร์ด Sigmize (WP "
+"Admin → Sigmize) ก่อนที่จะใช้ความสามารถนี้."
+
+#: includes/class-abilities-provider.php:144
+msgid "Sigmize: Connection Status"
+msgstr "Sigmize: สถานะการเชื่อมต่อ"
+
+#: includes/class-abilities-provider.php:145
+msgid ""
+"Returns the current Sigmize connection status, workspace UUID, connection "
+"ID, and last sync time."
+msgstr ""
+"คืนสถานะการเชื่อมต่อ Sigmize ปัจจุบัน, UUID ของเวิร์กสเปซ, ID การเชื่อมต่อ, "
+"และเวลาซิงค์ล่าสุด."
+
+#: includes/class-abilities-provider.php:176
+msgid "Sigmize: List Experiments"
+msgstr "Sigmize: รายการการทดลอง"
+
+#: includes/class-abilities-provider.php:177
+msgid ""
+"Returns the locally-cached list of A/B testing experiments, optionally "
+"filtered by status."
+msgstr ""
+"คืนรายการการทดลอง A/B testing ที่เก็บไว้ในเครื่อง ซึ่งสามารถกรองตามสถานะได้."
+
+#: includes/class-abilities-provider.php:185
+msgid "Filter experiments by status (e.g. \"running\")."
+msgstr "กรองการทดลองตามสถานะ (เช่น \"กำลังดำเนินการ\")."
+
+#: includes/class-abilities-provider.php:213
+msgid "Sigmize: Get Experiment"
+msgstr "Sigmize: รับการทดลอง"
+
+#: includes/class-abilities-provider.php:214
+msgid "Returns a single experiment from the local cache by its UUID."
+msgstr "ส่งคืนการทดลองเดียวจากแคชท้องถิ่นโดย UUID ของมัน"
+
+#: includes/class-abilities-provider.php:223
+msgid "The UUID of the experiment to retrieve."
+msgstr "UUID ของการทดลองที่จะนำกลับมา"
+
+#: includes/class-abilities-provider.php:251
+msgid "Sigmize: Request Sync"
+msgstr "Sigmize: ขอซิงค์"
+
+#: includes/class-abilities-provider.php:252
+msgid ""
+"Triggers an immediate sync that fetches all experiments from the remote "
+"Sigmize SaaS platform and overwrites the local experiment cache. Makes an "
+"outbound HTTP request to the Sigmize API. Safe to run multiple times — each "
+"run fetches the latest data. Avoid calling this repeatedly in quick "
+"succession."
+msgstr ""
+"จุดกระตุ้นซิงค์ทันทีที่ดึงข้อมูลการทดลองทั้งหมดจากแพลตฟอร์ม Sigmize SaaS "
+"ระยะไกลและเขียนทับแคชการทดลองท้องถิ่น ทำการร้องขอ HTTP ออกไปยัง API ของ "
+"Sigmize ปลอดภัยที่จะรันหลายครั้ง — ทุกครั้งจะดึงข้อมูลล่าสุด "
+"หลีกเลี่ยงการเรียกซ้ำๆ ในระยะเวลาสั้นๆ"
+
+#: includes/class-abilities-provider.php:283
+msgid "Sigmize: Cache Stats"
+msgstr "Sigmize: สถิติแคช"
+
+#: includes/class-abilities-provider.php:284
+msgid ""
+"Returns statistics about the local experiments cache, including count and "
+"last sync time."
+msgstr "ส่งคืนสถิติของแคชการทดลองท้องถิ่น รวมถึงจำนวนและเวลาซิงค์ล่าสุด"
+
+#: includes/class-abilities-provider.php:315
+msgid "Sigmize: Get Settings"
+msgstr "Sigmize: รับการตั้งค่า"
+
+#: includes/class-abilities-provider.php:316
+msgid ""
+"Returns the current Sigmize plugin settings including SDK loading mode and "
+"GDPR configuration. Call this before using update-sdk-mode to check the "
+"current state."
+msgstr ""
+"ส่งคืนการตั้งค่า plugin Sigmize ปัจจุบัน รวมถึงโหมดการโหลด SDK "
+"และการกำหนดค่าของ GDPR โทรหานี้ก่อนที่จะใช้ update-sdk-mode "
+"เพื่อตรวจสอบสถานะปัจจุบัน"
+
+#: includes/class-abilities-provider.php:347
+msgid "Sigmize: Update SDK Mode"
+msgstr "Sigmize: อัปเดตโหมด SDK"
+
+#: includes/class-abilities-provider.php:348
+msgid ""
+"Enables or disables manual SDK loading mode for the Sigmize snippet. When "
+"enabled, the Sigmize JavaScript SDK is not automatically injected into pages"
+" — the site owner must load it manually. This directly affects whether A/B "
+"tests run on the frontend. Confirm with the user before changing, especially"
+" when disabling automatic loading, as it will stop all running experiments "
+"from functioning."
+msgstr ""
+"เปิดหรือปิดโหมดการโหลด SDK ด้วยตนเองสำหรับสคริปต์ Sigmize เมื่อเปิดใช้งาน "
+"SDK JavaScript ของ Sigmize จะไม่ถูกฉีดลงในหน้าโดยอัตโนมัติ — "
+"เจ้าของเว็บไซต์ต้องโหลดเอง สิ่งนี้ส่งผลต่อการทดสอบ A/B ที่ทำงานในส่วนหน้า "
+"ยืนยันกับผู้ใช้ก่อนที่จะเปลี่ยนโดยเฉพาะเมื่อปิดการโหลดอัตโนมัติ "
+"เนื่องจากจะทำให้การทดลองทั้งหมดที่กำลังทำงานหยุดทำงาน"
+
+#: includes/class-abilities-provider.php:357
+msgid "Whether to enable manual SDK loading."
+msgstr "ว่าจะเปิดใช้งานการโหลด SDK ด้วยตนเองหรือไม่"
+
+#: includes/class-abilities-provider.php:385
+msgid "Sigmize: Disconnect"
+msgstr "Sigmize: ยกเลิกการเชื่อมต่อ"
+
+#: includes/class-abilities-provider.php:386
+msgid ""
+"Permanently disconnects the site from the Sigmize SaaS platform, deleting "
+"all authentication tokens, cached experiment data, and plugin settings. This"
+" cannot be undone — the user will need to reconnect and reconfigure from "
+"scratch. Always ask the user to explicitly confirm before running this."
+msgstr ""
+"ยกเลิกการเชื่อมต่อเว็บไซต์อย่างถาวรจากแพลตฟอร์ม Sigmize SaaS "
+"ลบโทเค็นการรับรองความถูกต้อง ข้อมูลการทดลองที่เก็บไว้ และการตั้งค่า plugin "
+"ทั้งหมด สิ่งนี้ไม่สามารถย้อนกลับได้ — "
+"ผู้ใช้จะต้องเชื่อมต่อใหม่และกำหนดค่าจากเริ่มต้นเสมอ "
+"โปรดขอให้ผู้ใช้ยืนยันอย่างชัดเจนก่อนที่จะทำการนี้"
+
+#: includes/class-abilities-provider.php:504
+msgid "The `uuid` input parameter is required."
+msgstr "พารามิเตอร์อินพุต `uuid` เป็นสิ่งจำเป็น"
+
+#: includes/class-abilities-provider.php:616
+msgid "The `manual_sdk_loading` input parameter is required."
+msgstr "พารามิเตอร์อินพุต `manual_sdk_loading` เป็นสิ่งจำเป็น"
+
+#: includes/class-auth-manager.php:549
+msgid "Invalid authentication request. Please try connecting again."
+msgstr "คำขอการรับรองความถูกต้องไม่ถูกต้อง โปรดลองเชื่อมต่ออีกครั้ง"
+
+#: includes/class-auth-manager.php:550
+msgid "Authentication failed. Please try again."
+msgstr "การรับรองความถูกต้องล้มเหลว โปรดลองอีกครั้ง"
+
+#. translators: %d: HTTP status code returned by the API.
+#: includes/class-saas-client.php:105 includes/class-saas-client.php:168
+#: includes/class-saas-client.php:232 includes/class-saas-client.php:294
+#: includes/class-saas-client.php:417
+#, php-format
+msgid "API returned status code %d"
+msgstr "API ส่งกลับรหัสสถานะ %d"
+
+#: includes/class-saas-client.php:115 includes/class-saas-client.php:178
+#: includes/class-saas-client.php:242 includes/class-saas-client.php:427
+msgid "Invalid JSON response from API"
+msgstr "การตอบสนอง JSON ที่ไม่ถูกต้องจาก API"
+
+#. translators: %s: error message detail.
+#: includes/class-saas-client.php:124 includes/class-saas-client.php:187
+#: includes/class-saas-client.php:251 includes/class-saas-client.php:307
+#: includes/class-saas-client.php:436
+#, php-format
+msgid "Exception during API request: %s"
+msgstr "เกิดข้อยกเว้นระหว่างการร้องขอ API: %s"
+
+#: includes/frontend/integrations/class-abstract-integration.php:175
+#: src/components/AuthPage.jsx:190
+msgid "Easy Digital Downloads"
+msgstr "Easy Digital Downloads"
+
+#: includes/frontend/integrations/class-abstract-integration.php:177
+msgid "SureCart"
+msgstr "SureCart"
+
+#: includes/frontend/integrations/class-abstract-integration.php:179
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: includes/frontend/integrations/class-abstract-integration.php:181
+msgid "Custom Events"
+msgstr "เหตุการณ์ที่กำหนดเอง"
+
+#: sigmize.php:288
+msgid "Access Dashboard"
+msgstr "เข้าถึงแดชบอร์ด"
+
+#: sigmize.php:289
+msgid "Get Started Now"
+msgstr "เริ่มต้นตอนนี้"
+
+#: src/App.jsx:31
+msgid "Authentication"
+msgstr "การรับรองความถูกต้อง"
+
+#: src/App.jsx:46
+msgid "A/B Testing (SaaS)"
+msgstr "A/B Testing (SaaS)"
+
+#: src/components/AuthPage.jsx:108
+msgid "Authentication failed"
+msgstr "การรับรองความถูกต้องล้มเหลว"
+
+#: src/components/AuthPage.jsx:110
+msgid "Please try again. If the problem persists, contact support."
+msgstr "โปรดลองอีกครั้ง หากปัญหายังคงอยู่ โปรดติดต่อฝ่ายสนับสนุน"
+
+#: src/components/AuthPage.jsx:131
+msgid "Welcome to Sigmize"
+msgstr "ยินดีต้อนรับสู่ Sigmize"
+
+#: src/components/AuthPage.jsx:135
+msgid ""
+"Sigmize is a comprehensive A/B testing and analytics platform that helps you"
+" optimize your website performance through data-driven experiments. Create "
+"variations, analyze user behavior with heatmaps and session replays, and "
+"make informed decisions based on real insights."
+msgstr ""
+"Sigmize เป็นแพลตฟอร์มการทดสอบ A/B และการวิเคราะห์ที่ครอบคลุม "
+"ซึ่งช่วยให้คุณปรับปรุงประสิทธิภาพเว็บไซต์ของคุณผ่านการทดลองที่ขับเคลื่อนด้วยข้อมูล"
+" สร้างรูปแบบต่างๆ วิเคราะห์พฤติกรรมผู้ใช้ด้วยแผนที่ความร้อนและการเล่นเซสชัน "
+"และตัดสินใจอย่างมีข้อมูลตามข้อมูลเชิงลึกจริง"
+
+#: src/components/AuthPage.jsx:140 src/components/AuthPage.jsx:236
+msgid "Get Started"
+msgstr "เริ่มต้นใช้งาน"
+
+#: src/components/AuthPage.jsx:153
+msgid "Analytics Dashboard Preview"
+msgstr "ตัวอย่างแดชบอร์ดการวิเคราะห์"
+
+#: src/components/AuthPage.jsx:165
+msgid "Experiment Management"
+msgstr "การจัดการการทดลอง"
+
+#: src/components/AuthPage.jsx:166
+msgid ""
+"Create and manage A/B tests with intuitive controls and comprehensive "
+"experiment tracking."
+msgstr ""
+"สร้างและจัดการการทดสอบ A/B "
+"ด้วยการควบคุมที่เข้าใจง่ายและการติดตามการทดลองที่ครอบคลุม"
+
+#: src/components/AuthPage.jsx:170
+msgid "Variation Testing"
+msgstr "การทดสอบรูปแบบ"
+
+#: src/components/AuthPage.jsx:171
+msgid ""
+"Test different page variations and element changes to find the most "
+"effective designs."
+msgstr ""
+"ทดสอบรูปแบบหน้าและการเปลี่ยนแปลงองค์ประกอบที่แตกต่างกันเพื่อค้นหาการออกแบบที่มีประสิทธิภาพที่สุด"
+
+#: src/components/AuthPage.jsx:175
+msgid "Traffic Assignment"
+msgstr "การมอบหมายการเข้าชม"
+
+#: src/components/AuthPage.jsx:176
+msgid ""
+"Intelligent visitor assignment ensures balanced traffic distribution across "
+"test variants."
+msgstr ""
+"การมอบหมายผู้เข้าชมอย่างชาญฉลาดรับรองการกระจายการเข้าชมอย่างสมดุลระหว่างรูปแบบการทดสอบ"
+
+#: src/components/AuthPage.jsx:180
+msgid "Heatmap Analytics"
+msgstr "การวิเคราะห์แผนที่ความร้อน"
+
+#: src/components/AuthPage.jsx:181
+msgid ""
+"Visualize user interactions with click heatmaps to understand where visitors"
+" engage most on your pages."
+msgstr ""
+"แสดงให้เห็นถึงการโต้ตอบของผู้ใช้ด้วยแผนที่ความร้อนเพื่อเข้าใจว่าผู้เข้าชมมีส่วนร่วมมากที่สุดที่ไหนในหน้าเว็บของคุณ"
+
+#: src/components/AuthPage.jsx:185
+msgid "Session Replays"
+msgstr "การเล่นเซสชัน"
+
+#: src/components/AuthPage.jsx:186
+msgid ""
+"Watch real user sessions to understand visitor behavior and identify "
+"conversion roadblocks."
+msgstr ""
+"ดูเซสชันจริงของผู้ใช้เพื่อเข้าใจพฤติกรรมของผู้เข้าชมและระบุอุปสรรคในการเปลี่ยนแปลง"
+
+#: src/components/AuthPage.jsx:191
+msgid ""
+"Track purchase completions and revenue per variation. Measure which variant "
+"drives more digital product sales."
+msgstr ""
+"ติดตามการทำซ้ำการซื้อและรายได้ต่อรูปแบบ "
+"วัดว่ารูปแบบใดสร้างยอดขายสินค้าดิจิทัลมากขึ้น"
+
+#: src/components/AuthPage.jsx:195
+msgid "SureCart Integration"
+msgstr "การรวม SureCart"
+
+#: src/components/AuthPage.jsx:196
+msgid ""
+"Monitor add-to-cart and order completion events per variant. Optimize "
+"checkout flows for maximum revenue."
+msgstr ""
+"ตรวจสอบเหตุการณ์การเพิ่มลงตะกร้าและการทำรายการเสร็จสมบูรณ์ต่อรูปแบบ "
+"ปรับปรุงกระบวนการเช็คเอาต์เพื่อให้ได้รายได้สูงสุด"
+
+#: src/components/AuthPage.jsx:200
+msgid "WooCommerce Integration"
+msgstr "การรวม WooCommerce"
+
+#: src/components/AuthPage.jsx:201
+msgid ""
+"Track cart additions and completed purchases by variation. Compare "
+"conversion rates and average order values."
+msgstr ""
+"ติดตามการเพิ่มลงตะกร้าและการซื้อที่เสร็จสมบูรณ์โดยแยกรูปแบบ "
+"เปรียบเทียบอัตราการแปลงและมูลค่าการสั่งซื้อเฉลี่ย"
+
+#: src/components/AuthPage.jsx:210
+msgid "Trusted by 100K Businesses"
+msgstr "ได้รับความไว้วางใจจากธุรกิจ 100K"
+
+#: src/components/AuthPage.jsx:247
+msgid "Back to Dashboard"
+msgstr "กลับไปที่แดชบอร์ด"
+
+#: src/components/ErrorBoundary.jsx:60
+msgid "Something went wrong"
+msgstr "มีบางอย่างผิดพลาด"
+
+#: src/components/ErrorBoundary.jsx:62
+msgid ""
+"We're sorry, but something unexpected happened. Please try refreshing the "
+"page."
+msgstr "เราขอโทษ แต่เกิดเหตุการณ์ที่ไม่คาดคิดขึ้น โปรดลองรีเฟรชหน้าเว็บ"
+
+#: src/components/ErrorBoundary.jsx:70 src/components/ErrorBoundary.jsx:159
+msgid "Try Again"
+msgstr "ลองอีกครั้ง"
+
+#: src/components/ErrorBoundary.jsx:76
+msgid "Reload Page"
+msgstr "โหลดหน้าใหม่"
+
+#: src/components/ErrorBoundary.jsx:84
+msgid "🔍 Error Details (Development Mode)"
+msgstr "🔍 รายละเอียดข้อผิดพลาด (โหมดพัฒนา)"
+
+#: src/components/ErrorBoundary.jsx:88
+msgid "Error:"
+msgstr "ข้อผิดพลาด:"
+
+#: src/components/ErrorBoundary.jsx:95
+msgid "Component Stack:"
+msgstr "สแต็คส่วนประกอบ:"
+
+#. translators: %s: page name.
+#: src/components/ErrorBoundary.jsx:132
+#, js-format
+msgid ""
+"There was an error loading the %s page. Please try refreshing the page."
+msgstr "เกิดข้อผิดพลาดในการโหลดหน้าที่ %s โปรดลองรีเฟรชหน้าเว็บ"
+
+#: src/components/ErrorBoundary.jsx:140
+msgid "Oops! Something went wrong"
+msgstr "อุ๊บส์! มีอะไรบางอย่างผิดพลาด"
+
+#. translators: %s: page name.
+#: src/components/ErrorBoundary.jsx:145
+#, js-format
+msgid ""
+"We encountered an error while loading the %s page. This might be a temporary"
+" issue."
+msgstr "เราเจอข้อผิดพลาดขณะโหลดหน้าที่ %s อาจเป็นปัญหาชั่วคราว"
+
+#: src/components/ErrorBoundary.jsx:153 src/components/ErrorBoundary.jsx:255
+msgid "Refresh Page"
+msgstr "โหลดหน้าอีกครั้ง"
+
+#. translators: %s: component name.
+#: src/components/ErrorBoundary.jsx:183
+#, js-format
+msgid "Error loading %s"
+msgstr "เกิดข้อผิดพลาดในการโหลด %s"
+
+#. translators: %s: name of the item that failed to load.
+#: src/components/ErrorBoundary.jsx:194 src/components/ErrorBoundary.jsx:232
+#, js-format
+msgid "Unable to load %s"
+msgstr "ไม่สามารถโหลด %s ได้"
+
+#. translators: %s: component name.
+#: src/components/ErrorBoundary.jsx:209
+#, js-format
+msgid "There was an error loading the %s. Please try again."
+msgstr "เกิดข้อผิดพลาดในการโหลด %s กรุณาลองอีกครั้ง"
+
+#. translators: %s: type of data being loaded.
+#: src/components/ErrorBoundary.jsx:223
+#, js-format
+msgid "Failed to load %s. Please check your connection and try again."
+msgstr "ไม่สามารถโหลด %s ได้ กรุณาตรวจสอบการเชื่อมต่อและลองอีกครั้ง"
+
+#. translators: %s: type of data being loaded.
+#: src/components/ErrorBoundary.jsx:238
+#, js-format
+msgid ""
+"We're having trouble loading the %s. This could be due to a network issue or"
+" server problem."
+msgstr "เราประสบปัญหาในการโหลด %s อาจเกิดจากปัญหาเครือข่ายหรือเซิร์ฟเวอร์"
+
+#: src/components/ErrorBoundary.jsx:249
+msgid "Retry"
+msgstr "ลองอีกครั้ง"
+
+#: src/components/SaaSInfo.jsx:27
+msgid "Never"
+msgstr "ไม่เคย"
+
+#: src/components/SaaSInfo.jsx:41
+msgid "Failed to fetch sync data"
+msgstr "ไม่สามารถดึงข้อมูลซิงค์"
+
+#: src/components/SaaSInfo.jsx:68
+msgid "Failed to update setting"
+msgstr "ไม่สามารถอัปเดตการตั้งค่า"
+
+#: src/components/SaaSInfo.jsx:72
+msgid "Setting Updated"
+msgstr "อัปเดตการตั้งค่าเสร็จสมบูรณ์"
+
+#: src/components/SaaSInfo.jsx:72
+msgid "SDK loading setting updated"
+msgstr "กำลังโหลดการตั้งค่า SDK เสร็จสมบูรณ์"
+
+#: src/components/SaaSInfo.jsx:74
+msgid "Update Failed"
+msgstr "การอัปเดตล้มเหลว"
+
+#: src/components/SaaSInfo.jsx:74
+msgid "Unable to update setting"
+msgstr "ไม่สามารถอัปเดตการตั้งค่าได้"
+
+#: src/components/SaaSInfo.jsx:91
+msgid "Syncing"
+msgstr "กำลังซิงค์"
+
+#: src/components/SaaSInfo.jsx:91
+msgid "Requesting sync from Sigmize..."
+msgstr "กำลังขอซิงค์จาก Sigmize..."
+
+#: src/components/SaaSInfo.jsx:98
+msgid "Sync failed"
+msgstr "การซิงค์ล้มเหลว"
+
+#: src/components/SaaSInfo.jsx:101
+msgid "Synced"
+msgstr "ซิงค์เสร็จสมบูรณ์"
+
+#: src/components/SaaSInfo.jsx:101
+msgid "Experiments synced"
+msgstr "การทดลองซิงค์แล้ว"
+
+#: src/components/SaaSInfo.jsx:104
+msgid "Unable to sync"
+msgstr "ไม่สามารถทำการซิงค์ได้"
+
+#: src/components/SaaSInfo.jsx:105
+msgid "Sync Failed"
+msgstr "การซิงค์ล้มเหลว"
+
+#: src/components/SaaSInfo.jsx:123
+msgid "Disconnect failed"
+msgstr "ไม่สามารถตัดการเชื่อมต่อได้"
+
+#: src/components/SaaSInfo.jsx:126
+msgid "Disconnected"
+msgstr "ตัดการเชื่อมต่อแล้ว"
+
+#: src/components/SaaSInfo.jsx:126
+msgid "You have been disconnected."
+msgstr "คุณถูกตัดการเชื่อมต่อ"
+
+#: src/components/SaaSInfo.jsx:129
+msgid "Disconnect Failed"
+msgstr "การตัดการเชื่อมต่อล้มเหลว"
+
+#: src/components/SaaSInfo.jsx:129
+msgid "Unable to disconnect"
+msgstr "ไม่สามารถตัดการเชื่อมต่อได้"
+
+#: src/components/SaaSInfo.jsx:151
+msgid ""
+"Your WordPress site is connected to Sigmize. Create and manage A/B test "
+"experiments from your Sigmize dashboard, then sync to pull the latest "
+"experiment updates, settings, and configurations to WordPress for fast "
+"delivery to your visitors."
+msgstr ""
+"เว็บไซต์ WordPress ของคุณเชื่อมต่อกับ Sigmize สร้างและจัดการการทดลอง A/B "
+"จากแดชบอร์ด Sigmize ของคุณ จากนั้นซิงค์เพื่อดึงอัปเดตการทดลองล่าสุด "
+"การตั้งค่า และการกำหนดค่าไปยัง WordPress "
+"เพื่อการส่งมอบอย่างรวดเร็วแก่ผู้เข้าชมของคุณ"
+
+#: src/components/SaaSInfo.jsx:160
+msgid "Sync error"
+msgstr "ข้อผิดพลาดในการซิงค์"
+
+#: src/components/SaaSInfo.jsx:170
+msgid "Connection Status"
+msgstr "สถานะการเชื่อมต่อ"
+
+#: src/components/SaaSInfo.jsx:172
+msgid "Active & Healthy"
+msgstr "ใช้งาน & สุขภาพ"
+
+#: src/components/SaaSInfo.jsx:178
+msgid "Last Sync"
+msgstr "การซิงค์ล่าสุด"
+
+#: src/components/SaaSInfo.jsx:180
+msgid "Never synced"
+msgstr "ไม่เคยซิงค์"
+
+#: src/components/SaaSInfo.jsx:186
+msgid "Active Experiments"
+msgstr "การทดลองที่ใช้งานอยู่"
+
+#: src/components/SaaSInfo.jsx:200
+msgid "Auto Load SDK"
+msgstr "โหลด SDK โดยอัตโนมัติ"
+
+#: src/components/SaaSInfo.jsx:204
+msgid ""
+"Automatically inject the Sigmize JavaScript SDK on your website. Disable "
+"this only if you want to manually add the SDK script to your theme or custom"
+" code."
+msgstr ""
+"ฉีด Sigmize JavaScript SDK ลงในเว็บไซต์ของคุณโดยอัตโนมัติ "
+"ปิดการใช้งานนี้เฉพาะเมื่อคุณต้องการเพิ่มสคริปต์ SDK "
+"ด้วยตนเองในธีมหรือโค้ดที่กำหนดเองของคุณเท่านั้น"
+
+#: src/components/SaaSInfo.jsx:209
+msgid "Warning:"
+msgstr "คำเตือน:"
+
+#: src/components/SaaSInfo.jsx:209
+msgid ""
+"Auto loading is disabled. You'll need to manually add the SDK script to your"
+" website for A/B testing and analytics to work."
+msgstr ""
+"การโหลดอัตโนมัติถูกปิดใช้งาน คุณจะต้องเพิ่มสคริปต์ SDK "
+"ด้วยตนเองในเว็บไซต์ของคุณเพื่อให้การทดสอบ A/B และการวิเคราะห์ทำงานได้"
+
+#: src/components/SaaSInfo.jsx:235
+msgid "Open Dashboard"
+msgstr "เปิดแดชบอร์ด"
+
+#: src/components/SaaSInfo.jsx:252
+msgid "Syncing…"
+msgstr "กำลังซิงค์…"
+
+#: src/components/SaaSInfo.jsx:259
+msgid "Sync Now"
+msgstr "ซิงค์ตอนนี้"
+
+#: src/components/SaaSInfo.jsx:270
+msgid "Disconnect from Sigmize?"
+msgstr "ต้องการตัดการเชื่อมต่อจาก Sigmize?"
+
+#: src/components/SaaSInfo.jsx:273
+msgid ""
+"This will remove authentication and cached Sigmize experiments from "
+"WordPress. You can reconnect anytime."
+msgstr ""
+"นี่จะลบการตรวจสอบสิทธิ์และการทดลอง Sigmize ที่เก็บในแคชจาก WordPress "
+"คุณสามารถเชื่อมต่อใหม่ได้ทุกเมื่อ"
+
+#: src/components/SaaSInfo.jsx:277
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+#: src/components/SaaSInfo.jsx:284
+msgid "Disconnecting…"
+msgstr "กำลังตัดการเชื่อมต่อ…"
+
+#: src/components/SaaSInfo.jsx:284 src/components/SaaSInfo.jsx:298
+msgid "Disconnect"
+msgstr "ตัดการเชื่อมต่อ"
+
+#: src/components/ToastNotification.jsx:108
+msgid "Close"
+msgstr "ปิด"
+
+#: src/api.js:16
+msgid "Something went wrong. Please try again."
+msgstr "เกิดข้อผิดพลาดบางอย่าง กรุณาลองอีกครั้ง"
+
+#: includes/admin/class-dashboard-widget.php:57
+msgid "Sigmize - Experiment Summary"
+msgstr "Sigmize - สรุปการทดลอง"
+
+#. translators: %s: number of visitors.
+#: includes/admin/class-dashboard-widget.php:167
+#, php-format
+msgid "%s visitor"
+msgstr "ผู้เข้าชม %s คน"
+
+#. translators: %s: number of visitors.
+#: includes/admin/class-dashboard-widget.php:169
+#, php-format
+msgid "%s visitors"
+msgstr "ผู้เข้าชม %s คน"
+
+#. translators: %s: number of experiments currently running.
+#: includes/admin/class-dashboard-widget.php:171
+#, php-format
+msgid "%s active"
+msgstr "กำลังทำงาน %s รายการ"
+
+#: includes/admin/class-dashboard-widget.php:172
+msgid "No experiments are running yet."
+msgstr "ยังไม่มีการทดลองที่กำลังทำงาน"
+
+#: includes/admin/class-dashboard-widget.php:204
+msgid "Start testing what actually converts"
+msgstr "เริ่มทดสอบสิ่งที่สร้าง Conversion ได้จริง"
+
+#: includes/admin/class-dashboard-widget.php:206
+msgid ""
+"Connect your Sigmize account to run A/B tests, heatmaps and session "
+"recordings on this site, and see the results right here."
+msgstr ""
+"เชื่อมต่อบัญชี Sigmize เพื่อรันการทดสอบ A/B, ฮีตแมป "
+"และการบันทึกเซสชันบนเว็บไซต์นี้ และดูผลลัพธ์ได้ที่นี่"
+
+#: includes/admin/class-dashboard-widget.php:210
+msgid "Connect Sigmize"
+msgstr "เชื่อมต่อ Sigmize"
+
+#: includes/admin/class-dashboard-widget.php:230
+msgid "Experiments"
+msgstr "การทดลอง"
+
+#: includes/admin/class-dashboard-widget.php:236
+msgid "Total Impressions"
+msgstr "การแสดงผลทั้งหมด"
+
+#: includes/admin/class-dashboard-widget.php:237
+msgid "Conversion Rate"
+msgstr "อัตรา Conversion"
+
+#: includes/admin/class-dashboard-widget.php:238
+msgid "Heatmaps"
+msgstr "ฮีตแมป"
+
+#: includes/admin/class-dashboard-widget.php:239
+msgid "Session Recordings"
+msgstr "การบันทึกเซสชัน"
+
+#: includes/admin/class-dashboard-widget.php:244
+msgid "Running Experiments"
+msgstr "การทดลองที่กำลังทำงาน"
+
+#: includes/admin/class-dashboard-widget.php:249
+msgid "Could not load your Sigmize overview."
+msgstr "ไม่สามารถโหลดภาพรวม Sigmize ได้"
+
+#: includes/admin/class-dashboard-widget.php:250
+msgid "Check your connection"
+msgstr "ตรวจสอบการเชื่อมต่อ"
+
+#: includes/admin/class-dashboard-widget.php:255
+msgid "Open Sigmize"
+msgstr "เปิด Sigmize"
+
+#: includes/admin/class-dashboard-widget.php:258
+msgid "View Experiments"
+msgstr "ดูการทดลอง"
+
+#: includes/admin/class-dashboard-widget.php:306
+msgid "(opens in a new tab)"
+msgstr "(เปิดในแท็บใหม่)"
+
+#: includes/api/class-rest-controller.php:300
+msgid "This site is not connected to Sigmize."
+msgstr "เว็บไซต์นี้ยังไม่ได้เชื่อมต่อกับ Sigmize"
+
+#: includes/api/class-rest-controller.php:326
+msgid "Could not load your Sigmize overview. Please try again shortly."
+msgstr "ไม่สามารถโหลดภาพรวม Sigmize ได้ กรุณาลองใหม่อีกครั้งในภายหลัง"
+
+#: includes/api/class-rest-controller.php:618
+msgid "This site is already connected to Sigmize."
+msgstr "เว็บไซต์นี้เชื่อมต่อกับ Sigmize อยู่แล้ว"
+
+#: includes/api/class-rest-controller.php:639
+msgid ""
+"You already have a Sigmize account. Connect this site to it to finish setup."
+msgstr ""
+"คุณมีบัญชี Sigmize อยู่แล้ว "
+"เชื่อมต่อเว็บไซต์นี้กับบัญชีดังกล่าวเพื่อตั้งค่าให้เสร็จสิ้น"
+
+#: includes/api/class-rest-controller.php:653
+msgid "Your site is now connected and tracking."
+msgstr "เว็บไซต์ของคุณเชื่อมต่อแล้วและกำลังติดตามข้อมูล"
+
+#: includes/class-auth-manager.php:177
+msgid "This site has no valid administrator email address."
+msgstr "เว็บไซต์นี้ไม่มีอีเมลผู้ดูแลระบบที่ถูกต้อง"
+
+#: includes/class-auth-manager.php:194
+msgid "Could not reach Sigmize. Please try again."
+msgstr "ไม่สามารถเชื่อมต่อกับ Sigmize ได้ กรุณาลองใหม่อีกครั้ง"
+
+#: includes/class-auth-manager.php:212
+msgid "Sigmize could not set up your account."
+msgstr "Sigmize ไม่สามารถตั้งค่าบัญชีของคุณได้"
+
+#: includes/class-auth-manager.php:220
+msgid "Sigmize returned an unexpected response."
+msgstr "Sigmize ส่งการตอบกลับที่ไม่คาดคิด"
+
+#: includes/class-auth-manager.php:252
+msgid "Sigmize did not return usable credentials."
+msgstr "Sigmize ไม่ได้ส่งข้อมูลรับรองที่ใช้งานได้"
+
+#: includes/class-auth-manager.php:262
+msgid "Could not save the Sigmize connection."
+msgstr "ไม่สามารถบันทึกการเชื่อมต่อ Sigmize ได้"

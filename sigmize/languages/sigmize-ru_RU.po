@@ -1,0 +1,889 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Sigmize 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/sigmize\n"
+"POT-Creation-Date: 2026-06-03T13:20:33+00:00\n"
+"PO-Revision-Date: 2026-06-03T13:20:33+00:00\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Domain: sigmize\n"
+"X-Generator: WP-CLI 2.12.0\n"
+
+#. Plugin Name of the plugin
+#. Author of the plugin
+#: sigmize.php includes/admin/class-admin-menu.php:65
+#: includes/admin/class-admin-menu.php:66
+#: includes/class-abilities-provider.php:70 src/components/AuthPage.jsx:124
+#: src/components/SaaSInfo.jsx:145
+msgid "Sigmize"
+msgstr "Sigmize"
+
+#. Plugin URI of the plugin
+#: sigmize.php
+msgid "https://sigmize.com"
+msgstr "https://sigmize.com"
+
+#. Description of the plugin
+#: sigmize.php
+msgid ""
+"A powerful A/B testing plugin for WordPress that enables testing of pages "
+"and elements with comprehensive analytics."
+msgstr ""
+"Мощный плагин A/B тестирования для WordPress, который позволяет тестировать "
+"страницы и элементы с помощью полной аналитики."
+
+#. Author URI of the plugin
+#: sigmize.php
+msgid "https://sigmize.com/"
+msgstr "https://sigmize.com/"
+
+#: includes/admin/class-admin-menu.php:77
+#: includes/admin/class-admin-menu.php:78
+msgid "Dashboard"
+msgstr "Панель управления"
+
+#: includes/api/class-rest-controller.php:453
+msgid "Invalid nonce."
+msgstr "Неверный nonce."
+
+#: includes/api/class-rest-controller.php:485
+#: includes/api/class-rest-controller.php:989
+msgid "Too many requests. Please try again later."
+msgstr "Слишком много запросов. Пожалуйста, попробуйте снова позже."
+
+#: includes/api/class-rest-controller.php:508
+msgid "Missing X-Sigmize-Signature header."
+msgstr "Отсутствует заголовок X-Sigmize-Signature."
+
+#: includes/api/class-rest-controller.php:518
+msgid "Invalid webhook signature."
+msgstr "Неверная подпись вебхука."
+
+#: includes/api/class-rest-controller.php:544
+msgid "No authentication credentials configured."
+msgstr "Настройки учетных данных аутентификации не настроены."
+
+#: includes/api/class-rest-controller.php:554
+msgid "Missing or invalid Authorization header."
+msgstr "Отсутствует или неверный заголовок авторизации."
+
+#: includes/api/class-rest-controller.php:564
+msgid "Invalid bearer token."
+msgstr "Неверный токен носителя."
+
+#: includes/api/class-rest-controller.php:704
+msgid "Successfully disconnected from SaaS platform."
+msgstr "Успешно отключено от платформы SaaS."
+
+#: includes/api/class-rest-controller.php:747
+msgid "Not connected to SaaS platform."
+msgstr "Не подключено к платформе SaaS."
+
+#: includes/api/class-rest-controller.php:758
+msgid "Workspace UUID not found."
+msgstr "UUID рабочего пространства не найден."
+
+#: includes/api/class-rest-controller.php:778
+msgid "Failed to fetch experiments from SaaS platform."
+msgstr "Не удалось получить эксперименты с платформы SaaS."
+
+#. translators: %d: HTTP error code returned from SaaS platform
+#: includes/api/class-rest-controller.php:789
+#, php-format
+msgid "SaaS platform returned error code: %d"
+msgstr "Платформа SaaS вернула код ошибки: %d"
+
+#: includes/api/class-rest-controller.php:802
+msgid "Invalid JSON response from SaaS platform."
+msgstr "Неверный JSON ответ от платформы SaaS."
+
+#. translators: %d: number of experiments synced
+#: includes/api/class-rest-controller.php:940
+#, php-format
+msgid "Successfully synced %d experiment from SaaS platform."
+msgid_plural "Successfully synced %d experiments from SaaS platform."
+msgstr[0] "Успешно синхронизирован %d эксперимент с платформы SaaS."
+msgstr[1] "Успешно синхронизировано %d эксперимента с платформы SaaS."
+msgstr[2] "Успешно синхронизировано %d экспериментов с платформы SaaS."
+
+#. translators: %s: exception error message
+#: includes/api/class-rest-controller.php:958
+#, php-format
+msgid "An error occurred during sync: %s"
+msgstr "Произошла ошибка во время синхронизации: %s"
+
+#: includes/api/class-rest-controller.php:1001
+msgid "Failed to set consent cookie."
+msgstr "Не удалось установить куки согласия."
+
+#: includes/api/class-rest-controller.php:1045
+#: includes/class-abilities-provider.php:627
+msgid "SDK loading setting updated successfully."
+msgstr "Настройки загрузки SDK успешно обновлены."
+
+#: includes/class-abilities-provider.php:71
+msgid "Manage A/B testing experiments and configuration."
+msgstr "Управляйте экспериментами A/B тестирования и настройками."
+
+#: includes/class-abilities-provider.php:120
+msgid ""
+"Sigmize is not connected to a workspace. Please connect via the Sigmize "
+"dashboard (WP Admin → Sigmize) before using this ability."
+msgstr ""
+"Sigmize не подключена к рабочему пространству. Пожалуйста, подключитесь "
+"через панель управления Sigmize (WP Admin → Sigmize) перед использованием "
+"этой возможности."
+
+#: includes/class-abilities-provider.php:144
+msgid "Sigmize: Connection Status"
+msgstr "Sigmize: Статус соединения"
+
+#: includes/class-abilities-provider.php:145
+msgid ""
+"Returns the current Sigmize connection status, workspace UUID, connection "
+"ID, and last sync time."
+msgstr ""
+"Возвращает текущий статус соединения Sigmize, UUID рабочего пространства, ID"
+" соединения и время последней синхронизации."
+
+#: includes/class-abilities-provider.php:176
+msgid "Sigmize: List Experiments"
+msgstr "Sigmize: Список экспериментов"
+
+#: includes/class-abilities-provider.php:177
+msgid ""
+"Returns the locally-cached list of A/B testing experiments, optionally "
+"filtered by status."
+msgstr ""
+"Возвращает локально кэшированный список экспериментов A/B тестирования, при "
+"необходимости отфильтрованный по статусу."
+
+#: includes/class-abilities-provider.php:185
+msgid "Filter experiments by status (e.g. \"running\")."
+msgstr "Отфильтровать эксперименты по статусу (например, \"выполняется\")."
+
+#: includes/class-abilities-provider.php:213
+msgid "Sigmize: Get Experiment"
+msgstr "Sigmize: Получить эксперимент"
+
+#: includes/class-abilities-provider.php:214
+msgid "Returns a single experiment from the local cache by its UUID."
+msgstr "Возвращает один эксперимент из локального кэша по его UUID."
+
+#: includes/class-abilities-provider.php:223
+msgid "The UUID of the experiment to retrieve."
+msgstr "UUID эксперимента для получения."
+
+#: includes/class-abilities-provider.php:251
+msgid "Sigmize: Request Sync"
+msgstr "Sigmize: Запрос синхронизации"
+
+#: includes/class-abilities-provider.php:252
+msgid ""
+"Triggers an immediate sync that fetches all experiments from the remote "
+"Sigmize SaaS platform and overwrites the local experiment cache. Makes an "
+"outbound HTTP request to the Sigmize API. Safe to run multiple times — each "
+"run fetches the latest data. Avoid calling this repeatedly in quick "
+"succession."
+msgstr ""
+"Запускает немедленную синхронизацию, которая извлекает все эксперименты из "
+"удаленной платформы Sigmize SaaS и перезаписывает локальный кэш "
+"экспериментов. Выполняет исходящий HTTP-запрос к API Sigmize. Безопасно "
+"запускать несколько раз — каждая попытка получает последние данные. "
+"Избегайте многократного вызова этого в быстром succession."
+
+#: includes/class-abilities-provider.php:283
+msgid "Sigmize: Cache Stats"
+msgstr "Sigmize: Статистика кэша"
+
+#: includes/class-abilities-provider.php:284
+msgid ""
+"Returns statistics about the local experiments cache, including count and "
+"last sync time."
+msgstr ""
+"Возвращает статистику о локальном кэше экспериментов, включая количество и "
+"время последней синхронизации."
+
+#: includes/class-abilities-provider.php:315
+msgid "Sigmize: Get Settings"
+msgstr "Sigmize: Получить настройки"
+
+#: includes/class-abilities-provider.php:316
+msgid ""
+"Returns the current Sigmize plugin settings including SDK loading mode and "
+"GDPR configuration. Call this before using update-sdk-mode to check the "
+"current state."
+msgstr ""
+"Возвращает текущее состояние настроек плагина Sigmize, включая режим "
+"загрузки SDK и конфигурацию GDPR. Вызовите это перед использованием update-"
+"sdk-mode, чтобы проверить текущее состояние."
+
+#: includes/class-abilities-provider.php:347
+msgid "Sigmize: Update SDK Mode"
+msgstr "Sigmize: Обновить режим SDK"
+
+#: includes/class-abilities-provider.php:348
+msgid ""
+"Enables or disables manual SDK loading mode for the Sigmize snippet. When "
+"enabled, the Sigmize JavaScript SDK is not automatically injected into pages"
+" — the site owner must load it manually. This directly affects whether A/B "
+"tests run on the frontend. Confirm with the user before changing, especially"
+" when disabling automatic loading, as it will stop all running experiments "
+"from functioning."
+msgstr ""
+"Включает или отключает ручной режим загрузки SDK для фрагмента Sigmize. "
+"Когда включен, JavaScript SDK Sigmize не внедряется автоматически на "
+"страницы — владельцу сайта необходимо загрузить его вручную. Это напрямую "
+"влияет на то, работают ли A/B тесты на фронтенде. Подтвердите с "
+"пользователем перед изменением, особенно при отключении автоматической "
+"загрузки, так как это остановит работу всех выполняющихся экспериментов."
+
+#: includes/class-abilities-provider.php:357
+msgid "Whether to enable manual SDK loading."
+msgstr "Включить ли ручную загрузку SDK."
+
+#: includes/class-abilities-provider.php:385
+msgid "Sigmize: Disconnect"
+msgstr "Sigmize: Отключение"
+
+#: includes/class-abilities-provider.php:386
+msgid ""
+"Permanently disconnects the site from the Sigmize SaaS platform, deleting "
+"all authentication tokens, cached experiment data, and plugin settings. This"
+" cannot be undone — the user will need to reconnect and reconfigure from "
+"scratch. Always ask the user to explicitly confirm before running this."
+msgstr ""
+"Постоянно отключает сайт от платформы Sigmize SaaS, удаляя все токены "
+"аутентификации, данные кэшированных экспериментов и настройки плагина. Это "
+"нельзя будет отменить — пользователю нужно будет повторно подключиться и "
+"настроить все заново. Всегда просите пользователя явно подтвердить перед "
+"запуском этого."
+
+#: includes/class-abilities-provider.php:504
+msgid "The `uuid` input parameter is required."
+msgstr "Параметр ввода `uuid` обязателен."
+
+#: includes/class-abilities-provider.php:616
+msgid "The `manual_sdk_loading` input parameter is required."
+msgstr "Параметр ввода `manual_sdk_loading` обязателен."
+
+#: includes/class-auth-manager.php:549
+msgid "Invalid authentication request. Please try connecting again."
+msgstr ""
+"Недействительный запрос на аутентификацию. Пожалуйста, попробуйте "
+"подключиться снова."
+
+#: includes/class-auth-manager.php:550
+msgid "Authentication failed. Please try again."
+msgstr "Ошибка аутентификации. Пожалуйста, попробуйте снова."
+
+#. translators: %d: HTTP status code returned by the API.
+#: includes/class-saas-client.php:105 includes/class-saas-client.php:168
+#: includes/class-saas-client.php:232 includes/class-saas-client.php:294
+#: includes/class-saas-client.php:417
+#, php-format
+msgid "API returned status code %d"
+msgstr "API вернул код состояния %d"
+
+#: includes/class-saas-client.php:115 includes/class-saas-client.php:178
+#: includes/class-saas-client.php:242 includes/class-saas-client.php:427
+msgid "Invalid JSON response from API"
+msgstr "Недействительный JSON-ответ от API"
+
+#. translators: %s: error message detail.
+#: includes/class-saas-client.php:124 includes/class-saas-client.php:187
+#: includes/class-saas-client.php:251 includes/class-saas-client.php:307
+#: includes/class-saas-client.php:436
+#, php-format
+msgid "Exception during API request: %s"
+msgstr "Исключение во время запроса к API: %s"
+
+#: includes/frontend/integrations/class-abstract-integration.php:175
+#: src/components/AuthPage.jsx:190
+msgid "Easy Digital Downloads"
+msgstr "Easy Digital Downloads"
+
+#: includes/frontend/integrations/class-abstract-integration.php:177
+msgid "SureCart"
+msgstr "SureCart"
+
+#: includes/frontend/integrations/class-abstract-integration.php:179
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: includes/frontend/integrations/class-abstract-integration.php:181
+msgid "Custom Events"
+msgstr "Пользовательские события"
+
+#: sigmize.php:288
+msgid "Access Dashboard"
+msgstr "Доступ к панели управления"
+
+#: sigmize.php:289
+msgid "Get Started Now"
+msgstr "Начать сейчас"
+
+#: src/App.jsx:31
+msgid "Authentication"
+msgstr "Аутентификация"
+
+#: src/App.jsx:46
+msgid "A/B Testing (SaaS)"
+msgstr "A/B тестирование (SaaS)"
+
+#: src/components/AuthPage.jsx:108
+msgid "Authentication failed"
+msgstr "Ошибка аутентификации"
+
+#: src/components/AuthPage.jsx:110
+msgid "Please try again. If the problem persists, contact support."
+msgstr ""
+"Пожалуйста, попробуйте снова. Если проблема сохраняется, свяжитесь со "
+"службой поддержки."
+
+#: src/components/AuthPage.jsx:131
+msgid "Welcome to Sigmize"
+msgstr "Добро пожаловать в Sigmize"
+
+#: src/components/AuthPage.jsx:135
+msgid ""
+"Sigmize is a comprehensive A/B testing and analytics platform that helps you"
+" optimize your website performance through data-driven experiments. Create "
+"variations, analyze user behavior with heatmaps and session replays, and "
+"make informed decisions based on real insights."
+msgstr ""
+"Sigmize — это комплексная платформа A/B тестирования и аналитики, которая "
+"помогает оптимизировать производительность вашего сайта с помощью основанных"
+" на данных экспериментов. Создавайте варианты, анализируйте поведение "
+"пользователей с помощью тепловых карт и повторов сеансов, и принимайте "
+"обоснованные решения на основе реальных данных."
+
+#: src/components/AuthPage.jsx:140 src/components/AuthPage.jsx:236
+msgid "Get Started"
+msgstr "Начать"
+
+#: src/components/AuthPage.jsx:153
+msgid "Analytics Dashboard Preview"
+msgstr "Предварительный просмотр аналитической панели"
+
+#: src/components/AuthPage.jsx:165
+msgid "Experiment Management"
+msgstr "Управление экспериментами"
+
+#: src/components/AuthPage.jsx:166
+msgid ""
+"Create and manage A/B tests with intuitive controls and comprehensive "
+"experiment tracking."
+msgstr ""
+"Создавайте и управляйте A/B тестами с интуитивно понятными инструментами и "
+"комплексным отслеживанием экспериментов."
+
+#: src/components/AuthPage.jsx:170
+msgid "Variation Testing"
+msgstr "Тестирование вариантов"
+
+#: src/components/AuthPage.jsx:171
+msgid ""
+"Test different page variations and element changes to find the most "
+"effective designs."
+msgstr ""
+"Тестируйте разные варианты страниц и изменения элементов, чтобы найти "
+"наиболее эффективные дизайны."
+
+#: src/components/AuthPage.jsx:175
+msgid "Traffic Assignment"
+msgstr "Назначение трафика"
+
+#: src/components/AuthPage.jsx:176
+msgid ""
+"Intelligent visitor assignment ensures balanced traffic distribution across "
+"test variants."
+msgstr ""
+"Интеллектуальное назначение посетителей обеспечивает сбалансированное "
+"распределение трафика между вариантами теста."
+
+#: src/components/AuthPage.jsx:180
+msgid "Heatmap Analytics"
+msgstr "Аналитика тепловых карт"
+
+#: src/components/AuthPage.jsx:181
+msgid ""
+"Visualize user interactions with click heatmaps to understand where visitors"
+" engage most on your pages."
+msgstr ""
+"Визуализируйте взаимодействия пользователей с помощью тепловых карт кликов, "
+"чтобы понять, где посетители наиболее активно взаимодействуют с вашими "
+"страницами."
+
+#: src/components/AuthPage.jsx:185
+msgid "Session Replays"
+msgstr "Повторы сеансов"
+
+#: src/components/AuthPage.jsx:186
+msgid ""
+"Watch real user sessions to understand visitor behavior and identify "
+"conversion roadblocks."
+msgstr ""
+"Смотрите реальные сеансы пользователей, чтобы понять поведение посетителей и"
+" выявить препятствия для конверсии."
+
+#: src/components/AuthPage.jsx:191
+msgid ""
+"Track purchase completions and revenue per variation. Measure which variant "
+"drives more digital product sales."
+msgstr ""
+"Отслеживайте завершение покупок и доход на вариант. Измеряйте, какой вариант"
+" приводит к большему количеству продаж цифровых продуктов."
+
+#: src/components/AuthPage.jsx:195
+msgid "SureCart Integration"
+msgstr "Интеграция SureCart"
+
+#: src/components/AuthPage.jsx:196
+msgid ""
+"Monitor add-to-cart and order completion events per variant. Optimize "
+"checkout flows for maximum revenue."
+msgstr ""
+"Отслеживайте события добавления в корзину и завершения заказов по каждому "
+"варианту. Оптимизируйте процессы оформления заказа для максимальной прибыли."
+
+#: src/components/AuthPage.jsx:200
+msgid "WooCommerce Integration"
+msgstr "Интеграция WooCommerce"
+
+#: src/components/AuthPage.jsx:201
+msgid ""
+"Track cart additions and completed purchases by variation. Compare "
+"conversion rates and average order values."
+msgstr ""
+"Отслеживайте добавления в корзину и завершенные покупки по варианту. "
+"Сравнивайте коэффициенты конверсии и средние значения заказов."
+
+#: src/components/AuthPage.jsx:210
+msgid "Trusted by 100K Businesses"
+msgstr "Доверено 100K бизнесами"
+
+#: src/components/AuthPage.jsx:247
+msgid "Back to Dashboard"
+msgstr "Назад к панели"
+
+#: src/components/ErrorBoundary.jsx:60
+msgid "Something went wrong"
+msgstr "Что-то пошло не так"
+
+#: src/components/ErrorBoundary.jsx:62
+msgid ""
+"We're sorry, but something unexpected happened. Please try refreshing the "
+"page."
+msgstr ""
+"Извините, но произошла непредвиденная ошибка. Пожалуйста, попробуйте "
+"обновить страницу."
+
+#: src/components/ErrorBoundary.jsx:70 src/components/ErrorBoundary.jsx:159
+msgid "Try Again"
+msgstr "Попробовать снова"
+
+#: src/components/ErrorBoundary.jsx:76
+msgid "Reload Page"
+msgstr "Перезагрузить страницу"
+
+#: src/components/ErrorBoundary.jsx:84
+msgid "🔍 Error Details (Development Mode)"
+msgstr "🔍 Подробности об ошибке (Режим разработки)"
+
+#: src/components/ErrorBoundary.jsx:88
+msgid "Error:"
+msgstr "Ошибка:"
+
+#: src/components/ErrorBoundary.jsx:95
+msgid "Component Stack:"
+msgstr "Стек компонентов:"
+
+#. translators: %s: page name.
+#: src/components/ErrorBoundary.jsx:132
+#, js-format
+msgid ""
+"There was an error loading the %s page. Please try refreshing the page."
+msgstr ""
+"Произошла ошибка при загрузке страницы %s. Пожалуйста, попробуйте обновить "
+"страницу."
+
+#: src/components/ErrorBoundary.jsx:140
+msgid "Oops! Something went wrong"
+msgstr "Упс! Что-то пошло не так"
+
+#. translators: %s: page name.
+#: src/components/ErrorBoundary.jsx:145
+#, js-format
+msgid ""
+"We encountered an error while loading the %s page. This might be a temporary"
+" issue."
+msgstr ""
+"Мы столкнулись с ошибкой при загрузке страницы %s. Это может быть временной "
+"проблемой."
+
+#: src/components/ErrorBoundary.jsx:153 src/components/ErrorBoundary.jsx:255
+msgid "Refresh Page"
+msgstr "Обновить страницу"
+
+#. translators: %s: component name.
+#: src/components/ErrorBoundary.jsx:183
+#, js-format
+msgid "Error loading %s"
+msgstr "Ошибка загрузки %s"
+
+#. translators: %s: name of the item that failed to load.
+#: src/components/ErrorBoundary.jsx:194 src/components/ErrorBoundary.jsx:232
+#, js-format
+msgid "Unable to load %s"
+msgstr "Не удалось загрузить %s"
+
+#. translators: %s: component name.
+#: src/components/ErrorBoundary.jsx:209
+#, js-format
+msgid "There was an error loading the %s. Please try again."
+msgstr "При загрузке %s произошла ошибка. Пожалуйста, попробуйте снова."
+
+#. translators: %s: type of data being loaded.
+#: src/components/ErrorBoundary.jsx:223
+#, js-format
+msgid "Failed to load %s. Please check your connection and try again."
+msgstr ""
+"Не удалось загрузить %s. Пожалуйста, проверьте подключение и попробуйте "
+"снова."
+
+#. translators: %s: type of data being loaded.
+#: src/components/ErrorBoundary.jsx:238
+#, js-format
+msgid ""
+"We're having trouble loading the %s. This could be due to a network issue or"
+" server problem."
+msgstr ""
+"У нас возникли проблемы с загрузкой %s. Это может быть связано с проблемой в"
+" сети или на сервере."
+
+#: src/components/ErrorBoundary.jsx:249
+msgid "Retry"
+msgstr "Попробовать снова"
+
+#: src/components/SaaSInfo.jsx:27
+msgid "Never"
+msgstr "Никогда"
+
+#: src/components/SaaSInfo.jsx:41
+msgid "Failed to fetch sync data"
+msgstr "Не удалось получить данные синхронизации"
+
+#: src/components/SaaSInfo.jsx:68
+msgid "Failed to update setting"
+msgstr "Не удалось обновить настройки"
+
+#: src/components/SaaSInfo.jsx:72
+msgid "Setting Updated"
+msgstr "Настройки обновлены"
+
+#: src/components/SaaSInfo.jsx:72
+msgid "SDK loading setting updated"
+msgstr "Настройки загрузки SDK обновлены"
+
+#: src/components/SaaSInfo.jsx:74
+msgid "Update Failed"
+msgstr "Не удалось обновить"
+
+#: src/components/SaaSInfo.jsx:74
+msgid "Unable to update setting"
+msgstr "Не удалось обновить настройки"
+
+#: src/components/SaaSInfo.jsx:91
+msgid "Syncing"
+msgstr "Синхронизация"
+
+#: src/components/SaaSInfo.jsx:91
+msgid "Requesting sync from Sigmize..."
+msgstr "Запрашивание синхронизации от Sigmize..."
+
+#: src/components/SaaSInfo.jsx:98
+msgid "Sync failed"
+msgstr "Синхронизация не удалась"
+
+#: src/components/SaaSInfo.jsx:101
+msgid "Synced"
+msgstr "Синхронизировано"
+
+#: src/components/SaaSInfo.jsx:101
+msgid "Experiments synced"
+msgstr "Эксперименты синхронизированы"
+
+#: src/components/SaaSInfo.jsx:104
+msgid "Unable to sync"
+msgstr "Не удалось синхронизировать"
+
+#: src/components/SaaSInfo.jsx:105
+msgid "Sync Failed"
+msgstr "Не удалось синхронизировать"
+
+#: src/components/SaaSInfo.jsx:123
+msgid "Disconnect failed"
+msgstr "Не удалось отключиться"
+
+#: src/components/SaaSInfo.jsx:126
+msgid "Disconnected"
+msgstr "Отключено"
+
+#: src/components/SaaSInfo.jsx:126
+msgid "You have been disconnected."
+msgstr "Вы были отключены."
+
+#: src/components/SaaSInfo.jsx:129
+msgid "Disconnect Failed"
+msgstr "Не удалось отключиться"
+
+#: src/components/SaaSInfo.jsx:129
+msgid "Unable to disconnect"
+msgstr "Не удалось отключиться"
+
+#: src/components/SaaSInfo.jsx:151
+msgid ""
+"Your WordPress site is connected to Sigmize. Create and manage A/B test "
+"experiments from your Sigmize dashboard, then sync to pull the latest "
+"experiment updates, settings, and configurations to WordPress for fast "
+"delivery to your visitors."
+msgstr ""
+"Ваш сайт WordPress подключен к Sigmize. Создавайте и управляйте A/B тестами "
+"из вашей панели Sigmize, затем синхронизируйте, чтобы получить последние "
+"обновления экспериментов, настройки и конфигурации в WordPress для быстрого "
+"доставки вашим посетителям."
+
+#: src/components/SaaSInfo.jsx:160
+msgid "Sync error"
+msgstr "Ошибка синхронизации"
+
+#: src/components/SaaSInfo.jsx:170
+msgid "Connection Status"
+msgstr "Статус подключения"
+
+#: src/components/SaaSInfo.jsx:172
+msgid "Active & Healthy"
+msgstr "Активный и здоровый"
+
+#: src/components/SaaSInfo.jsx:178
+msgid "Last Sync"
+msgstr "Последняя синхронизация"
+
+#: src/components/SaaSInfo.jsx:180
+msgid "Never synced"
+msgstr "Никогда не синхронизировалось"
+
+#: src/components/SaaSInfo.jsx:186
+msgid "Active Experiments"
+msgstr "Активные эксперименты"
+
+#: src/components/SaaSInfo.jsx:200
+msgid "Auto Load SDK"
+msgstr "Авто загрузка SDK"
+
+#: src/components/SaaSInfo.jsx:204
+msgid ""
+"Automatically inject the Sigmize JavaScript SDK on your website. Disable "
+"this only if you want to manually add the SDK script to your theme or custom"
+" code."
+msgstr ""
+"Автоматически добавлять JavaScript SDK Sigmize на ваш сайт. Отключите это "
+"только в том случае, если хотите вручную добавить скрипт SDK в вашу тему или"
+" пользовательский код."
+
+#: src/components/SaaSInfo.jsx:209
+msgid "Warning:"
+msgstr "Предупреждение:"
+
+#: src/components/SaaSInfo.jsx:209
+msgid ""
+"Auto loading is disabled. You'll need to manually add the SDK script to your"
+" website for A/B testing and analytics to work."
+msgstr ""
+"Авто загрузка отключена. Вам нужно будет вручную добавить скрипт SDK на ваш "
+"сайт для работы A/B тестирования и аналитики."
+
+#: src/components/SaaSInfo.jsx:235
+msgid "Open Dashboard"
+msgstr "Открыть панель управления"
+
+#: src/components/SaaSInfo.jsx:252
+msgid "Syncing…"
+msgstr "Синхронизация…"
+
+#: src/components/SaaSInfo.jsx:259
+msgid "Sync Now"
+msgstr "Синхронизировать сейчас"
+
+#: src/components/SaaSInfo.jsx:270
+msgid "Disconnect from Sigmize?"
+msgstr "Отключиться от Sigmize?"
+
+#: src/components/SaaSInfo.jsx:273
+msgid ""
+"This will remove authentication and cached Sigmize experiments from "
+"WordPress. You can reconnect anytime."
+msgstr ""
+"Это удалит авторизацию и кэшированные эксперименты Sigmize из WordPress. Вы "
+"можете подключиться снова в любое время."
+
+#: src/components/SaaSInfo.jsx:277
+msgid "Cancel"
+msgstr "Отменить"
+
+#: src/components/SaaSInfo.jsx:284
+msgid "Disconnecting…"
+msgstr "Отключение…"
+
+#: src/components/SaaSInfo.jsx:284 src/components/SaaSInfo.jsx:298
+msgid "Disconnect"
+msgstr "Отключить"
+
+#: src/components/ToastNotification.jsx:108
+msgid "Close"
+msgstr "Закрыть"
+
+#: src/api.js:16
+msgid "Something went wrong. Please try again."
+msgstr "Что-то пошло не так. Пожалуйста, попробуйте еще раз."
+
+#: includes/admin/class-dashboard-widget.php:57
+msgid "Sigmize - Experiment Summary"
+msgstr "Sigmize - Сводка по экспериментам"
+
+#. translators: %s: number of visitors.
+#: includes/admin/class-dashboard-widget.php:167
+#, php-format
+msgid "%s visitor"
+msgstr "%s посетитель"
+
+#. translators: %s: number of visitors.
+#: includes/admin/class-dashboard-widget.php:169
+#, php-format
+msgid "%s visitors"
+msgstr "%s посетителей"
+
+#. translators: %s: number of experiments currently running.
+#: includes/admin/class-dashboard-widget.php:171
+#, php-format
+msgid "%s active"
+msgstr "%s активно"
+
+#: includes/admin/class-dashboard-widget.php:172
+msgid "No experiments are running yet."
+msgstr "Пока нет запущенных экспериментов."
+
+#: includes/admin/class-dashboard-widget.php:204
+msgid "Start testing what actually converts"
+msgstr "Начните тестировать то, что действительно конвертирует"
+
+#: includes/admin/class-dashboard-widget.php:206
+msgid ""
+"Connect your Sigmize account to run A/B tests, heatmaps and session "
+"recordings on this site, and see the results right here."
+msgstr ""
+"Подключите аккаунт Sigmize, чтобы запускать A/B-тесты, тепловые карты и "
+"записи сессий на этом сайте и видеть результаты прямо здесь."
+
+#: includes/admin/class-dashboard-widget.php:210
+msgid "Connect Sigmize"
+msgstr "Подключить Sigmize"
+
+#: includes/admin/class-dashboard-widget.php:230
+msgid "Experiments"
+msgstr "Эксперименты"
+
+#: includes/admin/class-dashboard-widget.php:236
+msgid "Total Impressions"
+msgstr "Всего показов"
+
+#: includes/admin/class-dashboard-widget.php:237
+msgid "Conversion Rate"
+msgstr "Коэффициент конверсии"
+
+#: includes/admin/class-dashboard-widget.php:238
+msgid "Heatmaps"
+msgstr "Тепловые карты"
+
+#: includes/admin/class-dashboard-widget.php:239
+msgid "Session Recordings"
+msgstr "Записи сессий"
+
+#: includes/admin/class-dashboard-widget.php:244
+msgid "Running Experiments"
+msgstr "Запущенные эксперименты"
+
+#: includes/admin/class-dashboard-widget.php:249
+msgid "Could not load your Sigmize overview."
+msgstr "Не удалось загрузить сводку Sigmize."
+
+#: includes/admin/class-dashboard-widget.php:250
+msgid "Check your connection"
+msgstr "Проверьте подключение"
+
+#: includes/admin/class-dashboard-widget.php:255
+msgid "Open Sigmize"
+msgstr "Открыть Sigmize"
+
+#: includes/admin/class-dashboard-widget.php:258
+msgid "View Experiments"
+msgstr "Посмотреть эксперименты"
+
+#: includes/admin/class-dashboard-widget.php:306
+msgid "(opens in a new tab)"
+msgstr "(откроется в новой вкладке)"
+
+#: includes/api/class-rest-controller.php:300
+msgid "This site is not connected to Sigmize."
+msgstr "Этот сайт не подключён к Sigmize."
+
+#: includes/api/class-rest-controller.php:326
+msgid "Could not load your Sigmize overview. Please try again shortly."
+msgstr "Не удалось загрузить сводку Sigmize. Повторите попытку чуть позже."
+
+#: includes/api/class-rest-controller.php:618
+msgid "This site is already connected to Sigmize."
+msgstr "Этот сайт уже подключён к Sigmize."
+
+#: includes/api/class-rest-controller.php:639
+msgid ""
+"You already have a Sigmize account. Connect this site to it to finish setup."
+msgstr ""
+"У вас уже есть аккаунт Sigmize. Подключите к нему этот сайт, чтобы завершить"
+" настройку."
+
+#: includes/api/class-rest-controller.php:653
+msgid "Your site is now connected and tracking."
+msgstr "Ваш сайт подключён, сбор данных запущен."
+
+#: includes/class-auth-manager.php:177
+msgid "This site has no valid administrator email address."
+msgstr ""
+"У этого сайта нет корректного адреса электронной почты администратора."
+
+#: includes/class-auth-manager.php:194
+msgid "Could not reach Sigmize. Please try again."
+msgstr "Не удалось связаться с Sigmize. Повторите попытку."
+
+#: includes/class-auth-manager.php:212
+msgid "Sigmize could not set up your account."
+msgstr "Sigmize не смог настроить ваш аккаунт."
+
+#: includes/class-auth-manager.php:220
+msgid "Sigmize returned an unexpected response."
+msgstr "Sigmize вернул неожиданный ответ."
+
+#: includes/class-auth-manager.php:252
+msgid "Sigmize did not return usable credentials."
+msgstr "Sigmize не вернул пригодные учётные данные."
+
+#: includes/class-auth-manager.php:262
+msgid "Could not save the Sigmize connection."
+msgstr "Не удалось сохранить подключение к Sigmize."
