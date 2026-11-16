@@ -4,7 +4,7 @@ Tags: ab testing, split testing, heatmaps, conversion optimization, woocommerce
 Requires at least: 5.8
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -195,6 +195,10 @@ You can report the issue through our [Bug Bounty Program](https://brainstormforc
 3. Heatmap
 
 == Changelog ==
+
+= 1.2.1 - Monday, 16th November 2026 =
+* New: Added the Black Friday offer to the dashboard widget and the Sigmize row on the Plugins screen.
+* New: Added a visitor usage meter to the dashboard widget when a site reaches 80% of its plan's visitor limit.
 
 = 1.2.0 - Thursday, 20th August 2026 =
 * New: Added self-serve onboarding, so a Sigmize account can be created and connected without leaving WordPress.

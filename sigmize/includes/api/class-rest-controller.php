@@ -12,6 +12,7 @@
 
 namespace Sigmize\API;
 
+use Sigmize\Admin\Promotion;
 use Sigmize\Auth_Manager;
 use Sigmize\Encryption;
 use Sigmize\SaaS_Client;
@@ -273,9 +274,64 @@ class Rest_Controller extends WP_REST_Controller
                     'methods'             => WP_REST_Server::READABLE,
                     'callback'            => array($this, 'get_account_overview'),
                     'permission_callback' => array($this, 'admin_permissions_check'),
+                    'args'                => array(
+                        'source' => array(
+                            'type'    => 'string',
+                            'enum'    => array('wp-dashboard-widget', 'wp-plugin-page'),
+                            'default' => 'wp-dashboard-widget',
+                        ),
+                    ),
                 ),
             )
         );
+
+        // Close this year's Black Friday offer for the current user.
+        register_rest_route(
+            $this->namespace,
+            '/promotion/dismiss',
+            array(
+                array(
+                    'methods'             => WP_REST_Server::CREATABLE,
+                    'callback'            => array($this, 'dismiss_promotion'),
+                    'permission_callback' => array($this, 'admin_permissions_check'),
+                ),
+            )
+        );
+    }
+
+    /**
+     * Hide this year's Black Friday offer for the current user, everywhere.
+     *
+     * @since 1.2.1
+     *
+     * @param \WP_REST_Request $request Request object.
+     * @return \WP_REST_Response
+     */
+    public function dismiss_promotion($request)
+    {
+        Promotion::dismiss(get_current_user_id());
+
+        return rest_ensure_response(array('success' => true));
+    }
+
+    /**
+     * Add the time- and user-dependent nudges to an overview.
+     *
+     * Worked out on every request rather than cached with the overview: the
+     * sale phase depends on the clock and the dismissal on the current user.
+     *
+     * @since 1.2.1
+     *
+     * @param array  $overview Normalized overview.
+     * @param string $source   Where the overview will be shown, for UTMs.
+     * @return array
+     */
+    private function with_nudges($overview, $source)
+    {
+        $overview['promotion']   = Promotion::for_overview($overview, get_current_user_id(), $source);
+        $overview['usage_nudge'] = Promotion::usage_nudge($overview, $source);
+
+        return $overview;
     }
 
     /**
@@ -286,7 +342,7 @@ class Rest_Controller extends WP_REST_Controller
      *
      * @since 1.1.2
      *
-     * @param \WP_REST_Request $request Request object.
+     * @param \WP_REST_Request|null $request Request object.
      * @return \WP_REST_Response|WP_Error
      */
     public function get_account_overview($request)
@@ -302,6 +358,7 @@ class Rest_Controller extends WP_REST_Controller
             );
         }
 
+        $source = is_object($request) && 'wp-plugin-page' === $request->get_param('source') ? 'wp-plugin-page' : 'wp-dashboard-widget';
         $cached = get_transient(self::OVERVIEW_TRANSIENT);
 
         if (is_array($cached)) {
@@ -309,7 +366,7 @@ class Rest_Controller extends WP_REST_Controller
                 array(
                     'success'  => true,
                     'cached'   => true,
-                    'overview' => $cached,
+                    'overview' => $this->with_nudges($cached, $source),
                 )
             );
         }
@@ -333,12 +390,13 @@ class Rest_Controller extends WP_REST_Controller
         );
 
         set_transient(self::OVERVIEW_TRANSIENT, $overview, self::OVERVIEW_CACHE_TTL);
+        Promotion::remember_plan($overview['plan']['slug']);
 
         return rest_ensure_response(
             array(
                 'success'  => true,
                 'cached'   => false,
-                'overview' => $overview,
+                'overview' => $this->with_nudges($overview, $source),
             )
         );
     }
@@ -369,8 +427,16 @@ class Rest_Controller extends WP_REST_Controller
                 'conversion_rate' => isset($data['metrics']['conversion_rate']) ? (float) $data['metrics']['conversion_rate'] : 0.0,
             ),
             'plan'               => array(
-                'name'     => isset($data['plan']['name']) ? sanitize_text_field((string) $data['plan']['name']) : '',
-                'features' => array(),
+                'name'            => isset($data['plan']['name']) ? sanitize_text_field((string) $data['plan']['name']) : '',
+                // Empty when the platform is older than these fields; every
+                // nudge treats an empty slug as "unknown" and stays hidden.
+                'slug'            => isset($data['plan']['slug']) ? sanitize_key((string) $data['plan']['slug']) : '',
+                'is_trial'        => ! empty($data['plan']['is_trial']),
+                'has_active_plan' => isset($data['plan']['has_active_plan']) ? (bool) $data['plan']['has_active_plan'] : null,
+                'features'        => array(),
+            ),
+            'viewer'             => array(
+                'is_owner' => isset($data['viewer']['is_owner']) && true === $data['viewer']['is_owner'],
             ),
             'running'            => array(),
         );

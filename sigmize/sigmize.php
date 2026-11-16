@@ -4,7 +4,7 @@
  * Plugin Name: Sigmize
  * Plugin URI: https://sigmize.com
  * Description: A powerful A/B testing plugin for WordPress that enables testing of pages and elements with comprehensive analytics.
- * Version: 1.2.0
+ * Version: 1.2.1
  * Author: Sigmize
  * Author URI: https://sigmize.com/
  * License: GPLv2 or later
@@ -49,7 +49,7 @@ final class Sigmize
      *
      * @var string
      */
-    const VERSION = '1.2.0';
+    const VERSION = '1.2.1';
 
     /**
      * Plugin singleton instance
@@ -297,7 +297,64 @@ final class Sigmize
         // Add our link to the beginning of the array
         array_unshift($links, $dashboard_link);
 
+        $sale_link = $this->get_sale_action_link($is_connected);
+
+        if ('' !== $sale_link) {
+            $links[] = $sale_link;
+        }
+
         return $links;
+    }
+
+    /**
+     * Black Friday link for the Plugins screen row, or '' when there is none.
+     *
+     * Makes no request: a connected site uses the overview the dashboard widget
+     * already cached, and shows nothing until that cache exists. Lifetime
+     * customers, non-owners and anyone who closed the offer see nothing.
+     *
+     * @since 1.2.1
+     *
+     * @param bool $is_connected Whether the site is connected to Sigmize.
+     * @return string
+     */
+    private function get_sale_action_link($is_connected)
+    {
+        if (! current_user_can('manage_options') || ! Sigmize\Admin\Promotion::is_live()) {
+            return '';
+        }
+
+        if ($is_connected) {
+            $promotion = Sigmize\Admin\Promotion::for_overview(
+                get_transient(Sigmize\API\Rest_Controller::OVERVIEW_TRANSIENT),
+                get_current_user_id(),
+                'wp-plugins-screen'
+            );
+
+            if (null === $promotion) {
+                return '';
+            }
+
+            $url   = $promotion['url'];
+            $label = $promotion['cta'];
+        } else {
+            $offer = Sigmize\Admin\Promotion::connect_offer();
+
+            if (null === $offer) {
+                return '';
+            }
+
+            $url = Sigmize\Admin\Promotion::tracked_url(Sigmize\Admin\Promotion::PRICING_URL, 'wp-plugins-screen', 'row-link');
+            /* translators: %d: discount percentage. */
+            $label = sprintf(__('Black Friday: %d%% off', 'sigmize'), (int) $offer['percent']);
+        }
+
+        return sprintf(
+            '<a href="%1$s" target="_blank" rel="noopener noreferrer" style="font-weight: 600;">%2$s<span class="screen-reader-text"> %3$s</span></a>',
+            esc_url($url),
+            esc_html($label),
+            esc_html__('(opens in a new tab)', 'sigmize')
+        );
     }
 
     /**

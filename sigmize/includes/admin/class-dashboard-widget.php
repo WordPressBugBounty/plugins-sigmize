@@ -153,8 +153,9 @@ class Dashboard_Widget
             'sigmize-dashboard-widget',
             'sigmizeWidget',
             array(
-                'restUrl'  => esc_url_raw(rest_url('sigmize/v1/overview')),
-                'nonce'    => wp_create_nonce('wp_rest'),
+                'restUrl'    => esc_url_raw(rest_url('sigmize/v1/overview')),
+                'dismissUrl' => esc_url_raw(rest_url('sigmize/v1/promotion/dismiss')),
+                'nonce'      => wp_create_nonce('wp_rest'),
                 'appUrl'   => untrailingslashit(SIGMIZE_SAAS_BASE_URL),
                 'utm'      => 'utm_source=wp-dashboard-widget&utm_medium=wordpress&utm_campaign=running-experiment',
                 'settings' => array(
@@ -170,6 +171,16 @@ class Dashboard_Widget
                     /* translators: %s: number of experiments currently running. */
                     'activeCount'  => __('%s active', 'sigmize'),
                     'noRunning'    => __('No experiments are running yet.', 'sigmize'),
+                    'saleBadge'    => __('Black Friday', 'sigmize'),
+                    'lastChance'   => __('Last chance', 'sigmize'),
+                    /* translators: %s: date the sale ends, e.g. Dec 6. */
+                    'endsOn'       => __('Ends %s', 'sigmize'),
+                    'grabDeal'     => __('Grab the Deal', 'sigmize'),
+                    'closeOffer'   => __('Close this offer', 'sigmize'),
+                    'usageTitle'   => __('Visitor limit', 'sigmize'),
+                    /* translators: 1: visitors used, e.g. 42K. 2: visitor limit, e.g. 50K. */
+                    'usageText'    => __('%1$s of %2$s visitors used this month', 'sigmize'),
+                    'upgradePlan'  => __('Upgrade plan', 'sigmize'),
                 ),
             )
         );
@@ -210,7 +221,39 @@ class Dashboard_Widget
                     <?php esc_html_e('Connect Sigmize', 'sigmize'); ?>
                 </a>
             </p>
+            <?php $this->render_connect_sale_line(); ?>
         </div>
+        <?php
+    }
+
+    /**
+     * One sale line under the Connect button while Black Friday is on.
+     *
+     * Uses the dates built into the plugin, so a site with no account makes
+     * no external request. Hidden for sites last connected to a Lifetime or
+     * Business plan.
+     *
+     * @since 1.2.1
+     */
+    private function render_connect_sale_line()
+    {
+        $offer = Promotion::connect_offer();
+
+        if (null === $offer) {
+            return;
+        }
+
+        $message = sprintf(
+            /* translators: 1: discount percentage. 2: date the sale ends, e.g. December 6. */
+            __('Black Friday: Sigmize Lifetime is %1$d%% off until %2$s.', 'sigmize'),
+            (int) $offer['percent'],
+            wp_date(_x('F j', 'Black Friday end date format', 'sigmize'), Promotion::ENDS_AT)
+        );
+        ?>
+        <p class="sigmize-dw-sale-line">
+            <span class="sigmize-dw-dot" aria-hidden="true"></span>
+            <span><?php echo esc_html($message); ?></span>
+        </p>
         <?php
     }
 
@@ -224,6 +267,8 @@ class Dashboard_Widget
     {
         ?>
         <div class="sigmize-dw" id="sigmize-widget-root" data-state="loading">
+            <div class="sigmize-dw-promo" data-field="promotion" hidden></div>
+            <div class="sigmize-dw-usage" data-field="usage" hidden></div>
             <div class="sigmize-dw-cards">
                 <?php
                 $this->render_card(
@@ -354,6 +399,26 @@ class Dashboard_Widget
         {$id} .sigmize-dw-footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding-block-start: 14px; border-block-start: 1px solid #e5e7eb; }
         {$id} .sigmize-dw-actions { margin: 14px 0 0; }
         {$id} .sigmize-dw--connect .sigmize-dw-lede { margin-block-start: 6px; }
+        {$id} .sigmize-dw-promo { position: relative; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-bottom: 14px; padding: 12px 14px; padding-inline-end: 36px; border-radius: 10px; color: #fff; background: radial-gradient(90% 160% at 100% 0%, rgba(255, 91, 4, .5) 0%, transparent 55%), radial-gradient(80% 160% at 0% 100%, rgba(0, 140, 130, .6) 0%, transparent 60%), #050807; }
+        {$id} .sigmize-dw-promo[hidden], {$id} .sigmize-dw-usage[hidden] { display: none; }
+        {$id} .sigmize-dw-promo-text { display: flex; flex-direction: column; gap: 2px; flex: 1 1 200px; min-width: 0; }
+        {$id} .sigmize-dw-promo-kicker { display: inline-flex; align-items: center; gap: 6px; font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #fed7aa; }
+        {$id} .sigmize-dw-promo-line { font-size: 14px; font-weight: 600; line-height: 1.35; }
+        {$id} .sigmize-dw-promo-ends { font-size: 12px; color: rgba(255, 255, 255, .7); }
+        {$id} .sigmize-dw-promo-cta { display: inline-flex; align-items: center; padding: 7px 14px; border-radius: 6px; font-size: 13px; font-weight: 700; text-decoration: none; white-space: nowrap; color: #04201e; background: #7FD3C8; }
+        {$id} .sigmize-dw-promo-cta:hover, {$id} .sigmize-dw-promo-cta:focus { color: #04201e; background: #99e0d6; }
+        {$id} .sigmize-dw-promo-cta:focus-visible, {$id} .sigmize-dw-promo-close:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+        {$id} .sigmize-dw-promo-close { position: absolute; top: 6px; inset-inline-end: 6px; width: 26px; height: 26px; padding: 0; border: 0; border-radius: 4px; cursor: pointer; font-size: 18px; line-height: 26px; color: rgba(255, 255, 255, .7); background: transparent; }
+        {$id} .sigmize-dw-promo-close:hover { color: #fff; background: rgba(255, 255, 255, .1); }
+        {$id} .sigmize-dw-dot { display: inline-block; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%; background: #FF5B04; }
+        {$id} .sigmize-dw-usage { margin-bottom: 14px; padding: 12px 14px; border: 1px solid #fcd34d; border-radius: 8px; background: #fffbeb; }
+        {$id} .sigmize-dw-usage.is-full { border-color: #fca5a5; background: #fef2f2; }
+        {$id} .sigmize-dw-usage-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; font-size: 13px; font-weight: 600; color: #111827; }
+        {$id} .sigmize-dw-meter { height: 6px; border-radius: 999px; overflow: hidden; background: rgba(17, 24, 39, .08); }
+        {$id} .sigmize-dw-meter span { display: block; height: 100%; border-radius: inherit; background: #d97706; }
+        {$id} .sigmize-dw-usage.is-full .sigmize-dw-meter span { background: #dc2626; }
+        {$id} .sigmize-dw-usage-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-top: 8px; font-size: 12px; color: #4b5563; }
+        {$id} .sigmize-dw-sale-line { display: flex; align-items: center; gap: 8px; margin: 12px 0 0; font-size: 13px; color: #374151; }
         {$id} [data-state=\"loading\"] .sigmize-dw-card-value { color: #9ca3af; }
         {$id} [data-state=\"error\"] .sigmize-dw-cards,
         {$id} [data-state=\"error\"] .sigmize-dw-section { display: none; }
@@ -453,7 +518,126 @@ class Dashboard_Widget
         });
     }
 
+    function el(tag, className, text) {
+        var node = document.createElement(tag);
+        if (className) {
+            node.className = className;
+        }
+        if (text) {
+            node.textContent = text;
+        }
+        return node;
+    }
+
+    // Only ever links to the app or the pricing page, never a URL from the response.
+    function safeUrl(url) {
+        return typeof url === 'string' && url.indexOf(config.appUrl + '/') === 0 ? url : config.appUrl + '/organization/plans';
+    }
+
+    function dismissPromotion(box) {
+        box.hidden = true;
+
+        if (!config.dismissUrl) {
+            return;
+        }
+
+        fetch(config.dismissUrl, {
+            method: 'POST',
+            credentials: 'same-origin',
+            headers: {
+                'X-WP-Nonce': config.nonce
+            }
+        }).catch(function () {});
+    }
+
+    function renderPromotion(promotion) {
+        var box = field('promotion');
+        if (!box || !promotion || !promotion.line) {
+            return;
+        }
+
+        box.textContent = '';
+
+        var text = el('div', 'sigmize-dw-promo-text');
+        var kicker = el('span', 'sigmize-dw-promo-kicker');
+        var dot = el('span', 'sigmize-dw-dot');
+        dot.setAttribute('aria-hidden', 'true');
+        kicker.appendChild(dot);
+        kicker.appendChild(document.createTextNode(promotion.lastChance ? strings.lastChance : strings.saleBadge));
+        text.appendChild(kicker);
+        text.appendChild(el('span', 'sigmize-dw-promo-line', promotion.line));
+
+        var endsAt = new Date(Number(promotion.endsAt) || 0);
+        if (!isNaN(endsAt.getTime())) {
+            var ends = endsAt.toLocaleDateString(locale, { month: 'short', day: 'numeric' });
+            text.appendChild(el('span', 'sigmize-dw-promo-ends', (strings.endsOn || '%s').replace('%s', ends)));
+        }
+
+        var cta = el('a', 'sigmize-dw-promo-cta', strings.grabDeal);
+        cta.href = safeUrl(promotion.url);
+        cta.target = '_blank';
+        cta.rel = 'noopener noreferrer';
+
+        var close = el('button', 'sigmize-dw-promo-close', '\u00d7');
+        close.type = 'button';
+        close.setAttribute('aria-label', strings.closeOffer);
+        close.addEventListener('click', function () {
+            dismissPromotion(box);
+        });
+
+        box.appendChild(text);
+        box.appendChild(cta);
+        box.appendChild(close);
+        box.hidden = false;
+    }
+
+    function renderUsage(usage, promotion) {
+        var box = field('usage');
+        if (!box || !usage) {
+            return;
+        }
+
+        var percentage = Math.max(0, Math.min(100, Number(usage.percentage) || 0));
+
+        box.textContent = '';
+        box.classList.toggle('is-full', percentage >= 100);
+
+        var head = el('div', 'sigmize-dw-usage-head');
+        head.appendChild(el('span', '', strings.usageTitle));
+        head.appendChild(el('span', '', percentage + '%'));
+
+        var meter = el('div', 'sigmize-dw-meter');
+        var fill = el('span');
+        fill.style.width = percentage + '%';
+        meter.setAttribute('role', 'progressbar');
+        meter.setAttribute('aria-valuemin', '0');
+        meter.setAttribute('aria-valuemax', '100');
+        meter.setAttribute('aria-valuenow', String(percentage));
+        meter.setAttribute('aria-label', strings.usageTitle);
+        meter.appendChild(fill);
+
+        var foot = el('div', 'sigmize-dw-usage-foot');
+        foot.appendChild(el('span', '', (strings.usageText || '')
+            .replace('%1$s', function () { return String(usage.current || ''); })
+            .replace('%2$s', function () { return String(usage.limit || ''); })));
+
+        // During the sale the link carries the plan's sale price.
+        var link = el('a', 'sigmize-dw-link', promotion && promotion.cta ? promotion.cta : strings.upgradePlan);
+        link.href = safeUrl(promotion && promotion.url ? promotion.url : usage.url);
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        foot.appendChild(link);
+
+        box.appendChild(head);
+        box.appendChild(meter);
+        box.appendChild(foot);
+        box.hidden = false;
+    }
+
     function render(overview) {
+        renderPromotion(overview.promotion);
+        renderUsage(overview.usage_nudge, overview.promotion);
+
         setText('experiments_total', number(overview.experiments.total));
         setBadge('experiments_active', overview.experiments.active);
 
